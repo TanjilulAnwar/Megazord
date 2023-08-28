@@ -1,6 +1,7 @@
 # Megazord
 
-![alt text](https://github.com/TanjilulAnwar/megazord/blob/master/Megazord.webp?raw=true)
+<img src="https://github.com/TanjilulAnwar/megazord/blob/master/Megazord.webp" alt="drawing" width="200"/>
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
