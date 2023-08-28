@@ -1,5 +1,7 @@
 # Megazord
 
+![alt text](https://github.com/TanjilulAnwar/megazord/blob/master/Megazord.webp?raw=true)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
