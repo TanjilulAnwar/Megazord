@@ -45,3 +45,18 @@ p{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: dosis;
+  src: url('./assets/fonts/dosis/Dosis-Medium.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: work-sans;
+  src: url('./assets/fonts/work-sans/WorkSans-SemiBold.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: overpass;
+  src: url('./assets/fonts/overpass/Overpass-SemiBold.ttf') format("opentype");
+}

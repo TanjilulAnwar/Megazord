@@ -3,20 +3,26 @@ import { CommonModule } from '@angular/common';
 import { TestComponent } from './test/test.component';
 import { FooComponent } from './foo/foo.component';
 import { BarComponent } from './bar/bar.component';
+import { BannerComponent } from './banner/banner.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 const componentList =[
   TestComponent,
   FooComponent,
-  BarComponent
+  BarComponent,
+  BannerComponent
 ]
 
 @NgModule({
   declarations: [
-    ...componentList,
-    BarComponent
+    ...componentList
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbCarouselModule,
+    FormsModule
   ],
   exports:[
     ...componentList
