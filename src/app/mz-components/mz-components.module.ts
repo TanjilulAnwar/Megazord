@@ -21,7 +21,6 @@ const componentList =[
   ],
   imports: [
     CommonModule,
-    NgbCarouselModule,
     FormsModule
   ],
   exports:[
