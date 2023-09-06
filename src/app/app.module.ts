@@ -10,6 +10,7 @@ import { MzComponentsModule } from './mz-components/mz-components.module';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
  // schemas:[CUSTOM_ELEMENTS_SCHEMA],
   declarations: [

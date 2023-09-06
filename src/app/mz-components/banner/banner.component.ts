@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger, Draggable);
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -7,19 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-public bannerImg="/assets/images/sample-london.jpg"
-public model={
-  imageSrc:"/assets/images/sample-london.jpg",
-  width:1920,
-  height:1280
-}
-constructor(){
+  ngOnInit() {
+    this.setupGsap();
+  }
 
-}
+  setupGsap(): void {
+    const boxes = gsap.utils.toArray('.letter');
 
-ngOnInit(): void {
+    boxes.forEach((box:any, i) => {
+      const anim = gsap.fromTo(box, {autoAlpha: 0, y: 50}, {duration: 1+(i*1), autoAlpha: 1, y: 0});
+      ScrollTrigger.create({
+        trigger: box,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+      });
+    });
 
-}
+
+
+  }
 
 
 }
