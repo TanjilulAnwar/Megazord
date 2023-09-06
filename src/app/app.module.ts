@@ -9,7 +9,7 @@ import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MzComponentsModule } from './mz-components/mz-components.module';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
  // schemas:[CUSTOM_ELEMENTS_SCHEMA],
@@ -25,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     MzComponentsModule,
     BrowserAnimationsModule,
-    NgbCollapseModule 
+    NgbCollapseModule ,
+    HttpClientModule
     
   ],
   providers: [],
