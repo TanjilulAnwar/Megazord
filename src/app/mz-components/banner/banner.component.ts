@@ -19,7 +19,7 @@ export class BannerComponent implements OnInit {
     const boxes = gsap.utils.toArray('.letter');
 
     boxes.forEach((box:any, i) => {
-      const anim = gsap.fromTo(box, {autoAlpha: 0, y: 50}, {duration: 1+(i*1), autoAlpha: 1, y: 0});
+      const anim = gsap.fromTo(box, {autoAlpha: 0, y: 50}, {duration: 1+(i*0.3), autoAlpha: 1, y: 0});
       ScrollTrigger.create({
         trigger: box,
         animation: anim,
@@ -28,7 +28,16 @@ export class BannerComponent implements OnInit {
       });
     });
 
-
+    gsap.timeline()
+    .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 0, duration: 1})
+    .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 0, duration: 0.5})
+    .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 0, duration: 0.5})
+//.fromTo(".msg2", { y: -10, opacity: 0}, {opacity: 1, y: 0, duration: 1})
+   // .fromTo(".msg3", { x: -10, opacity: 0}, {opacity: 1, x: 0, duration: 1})
+  //  .fromTo("#f", { x: 10, opacity: 0}, {opacity: 1, x: 0, duration: 1})
+   // .fromTo("#s2", { opacity: 0}, {opacity: 1, rotation:360, duration: 1})
+   // .fromTo("#bracket", { x: -53}, {x:0, ease: "none", duration: 5}, 0)
+    
 
   }
 
