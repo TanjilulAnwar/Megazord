@@ -1,0 +1,48 @@
+    .bismillah-arab{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+      
+    }
+    
+    .none-select{
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+    .bismillah-bang{
+ 
+        font-family: 'musta' !important;
+        font-size: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .bismillah-eng{
+
+        font-family: 'dancing' !important;
+        font-size: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    
+    .bismillah-img{
+        width: 95%;
+    }
+
+    section {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        padding: 0;
+
+      
+      }

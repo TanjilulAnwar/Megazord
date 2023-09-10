@@ -29,9 +29,9 @@ export class BannerComponent implements OnInit {
     });
 
     gsap.timeline()
-    .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 0, duration: 1})
-    .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 0, duration: 0.5})
-    .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 0, duration: 0.5})
+    .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 1})
+    .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
+    .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
 //.fromTo(".msg2", { y: -10, opacity: 0}, {opacity: 1, y: 0, duration: 1})
    // .fromTo(".msg3", { x: -10, opacity: 0}, {opacity: 1, x: 0, duration: 1})
   //  .fromTo("#f", { x: 10, opacity: 0}, {opacity: 1, x: 0, duration: 1})
