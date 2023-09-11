@@ -33,6 +33,16 @@
         text-align: center;
     }
     
+
+    .letter-eng{
+
+        font-family: 'dancing' !important;
+        font-size: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:justify;
+    }
     
     .bismillah-img{
         width: 95%;
@@ -45,4 +55,41 @@
         padding: 0;
 
       
-      }
+    }
+    .mandala-img{
+        width: 10vw;
+    }
+    
+    
+    .mandala{
+    
+        display: flex;
+    }
+    
+    
+      
+///////////////////
+/// 
+/// 
+
+
+
+.cluster{position:relative; width:100%; max-width:874px; height:792px; margin:100px auto; background-color:transparent; padding-bottom:100px;}
+
+.clusterPieces{position:absolute;}
+
+.circle{width:100%; max-width:50vw; height:50px; background-color:#c56666; left:214px; bottom:0; z-index:4;}
+
+.dotsBlue{width:100%; height:auto; max-width:50vw; z-index:3; left:0; //top:80px;
+}
+
+.owlHorned{width:100%;
+      height:auto;
+      max-width:50vw;
+
+       // top:0; 
+       // right:0;
+         z-index:2;}
+
+.caption{font-family: 'Open Sans', sans-serif; font-size:14px; line-height:16px; color:#fc659e; text-align:right;}
+.caption span{color:#ffffff;}
