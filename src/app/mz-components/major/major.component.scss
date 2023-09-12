@@ -1,20 +1,24 @@
-    .bismillah-arab{
+    .bismillah-arab {
 
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
 
-      
+
     }
-    
-    .none-select{
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
+
+    .none-select {
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+        /* Standard syntax */
     }
-    .bismillah-bang{
- 
+
+    .bismillah-bang {
+
         font-family: 'musta' !important;
         font-size: 5vw;
         display: flex;
@@ -22,8 +26,8 @@
         align-items: center;
         text-align: center;
     }
-    
-    .bismillah-eng{
+
+    .bismillah-eng {
 
         font-family: 'dancing' !important;
         font-size: 5vw;
@@ -32,19 +36,28 @@
         align-items: center;
         text-align: center;
     }
-    
 
-    .letter-eng{
+
+    .letter-eng {
 
         font-family: 'dancing' !important;
         font-size: 3vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align:justify;
+        text-align: justify;
     }
-    
-    .bismillah-img{
+
+    .salam{
+        font-weight: 500;
+    }
+    .letter-eng-2 {
+
+        font-family: 'dancing' !important;
+        font-size: 3vw;
+        text-align: justify;
+    }
+    .bismillah-img {
         width: 95%;
     }
 
@@ -54,42 +67,55 @@
         position: relative;
         padding: 0;
 
-      
+
     }
-    .mandala-img{
-        width: 10vw;
+
+    .mandala-img {
+        width: 50vw;
     }
-    
-    
-    .mandala{
-    
+
+
+    .mandala {
+
         display: flex;
     }
+
+
+
+
+
+
+    .cluster {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        max-width: 50vw;
+        height: 50vw;
+
+    }
+
+    .clusterPieces {
+        position: absolute;
+    }
+
+    .dotsBlue {
+        width: 100%;
+        max-width: 50vw;
+        height: auto;
+        z-index: 2;
+ 
+    }
+
+    .owlHorned {
+        width: 100%;
+        max-width: 50vw;
+        height: auto;
+        z-index: 1;
+    }
+
+    .cntr{
+  display: flex;
+  justify-content: center;
+    }
     
-    
-      
-///////////////////
-/// 
-/// 
-
-
-
-.cluster{position:relative; width:100%; max-width:874px; height:792px; margin:100px auto; background-color:transparent; padding-bottom:100px;}
-
-.clusterPieces{position:absolute;}
-
-.circle{width:100%; max-width:50vw; height:50px; background-color:#c56666; left:214px; bottom:0; z-index:4;}
-
-.dotsBlue{width:100%; height:auto; max-width:50vw; z-index:3; left:0; //top:80px;
-}
-
-.owlHorned{width:100%;
-      height:auto;
-      max-width:50vw;
-
-       // top:0; 
-       // right:0;
-         z-index:2;}
-
-.caption{font-family: 'Open Sans', sans-serif; font-size:14px; line-height:16px; color:#fc659e; text-align:right;}
-.caption span{color:#ffffff;}

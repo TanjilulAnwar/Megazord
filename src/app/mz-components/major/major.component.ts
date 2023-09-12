@@ -23,9 +23,19 @@ export class MajorComponent implements OnInit {
   setupGsap(): void {
 // bismillah part
     gsap.timeline()
-    .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
-    .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
-    .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
+    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r4", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r5", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r6", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r7", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r8", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r9", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    // .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 2})
+    // .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
+    // .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
+    // .fromTo(".mandala", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
    
 //
 
@@ -51,25 +61,16 @@ export class MajorComponent implements OnInit {
 
 //parallax
 /* ------Great Horned Owl Sequence------  */
-gsap.set(".circle", { yPercent: -5});
-gsap.set(".dotsBlue", { yPercent: 10});
-gsap.set(".owlHorned", { yPercent: 0});
-gsap.set(".clusterGreat", { yPercent: 5});
 
-gsap.to(".circle", {
-  yPercent: 5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".clusterGreat",
-    scrub: 1
-  }, 
-});
+gsap.set(".dotsBlue", { yPercent: -2, xPercent:-5});
+gsap.set(".owlHorned", { yPercent: 0, xPercent:5});
 
 gsap.to(".dotsBlue", {
-  yPercent: -10,
+  yPercent: -2,
+  xPercent: 5,
   ease: "none",
   scrollTrigger: {
-    trigger: ".clusterGreat",
+    trigger: ".cluster",
     scrub: 1
   }, 
 });
@@ -77,34 +78,15 @@ gsap.to(".dotsBlue", {
 
 gsap.to(".owlHorned", {
   yPercent: 0,
-  xPercent:-10,
+  xPercent:-5,
   ease: "none",
   scrollTrigger: {
-    trigger: ".clusterGreat",
+    trigger: ".cluster",
     scrub: 1
   }, 
 });
 
-gsap.to(".caption", {
-  yPercent: 100,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".clusterGreat",
-  // markers:true,
-    end: "bottom center",
-    scrub: 1
-  }, 
-});
 
-gsap.to(".clusterGreat", {
-  yPercent: -5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".clusterGreat",
-    end: "bottom center",
-    scrub: 1
-  }, 
-});
 
 
 
