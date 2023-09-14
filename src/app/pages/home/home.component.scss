@@ -1,25 +1,32 @@
 
 @media screen and (max-width: 767px) {
     .letter-eng-2 {
-
+    
         font-family: 'dancing' !important;
         font-size: 5vw;
         text-align: justify;
+    }
+
+    .row{
+        margin: 1rem 0rem 1rem 0rem;
     }
     
 }
 
 @media screen and (min-width: 768px) {
     .letter-eng-2 {
-
+        
         font-family: 'dancing' !important;
         font-size: 3vw;
         text-align: justify;
     }
+    .row{
+        margin: 5rem 0rem 5rem 0rem;
+    }
     
 }
 .salam{
-    display: flex;
+
     font-weight: 600;
 }
 
@@ -70,8 +77,6 @@
     align-items: center;
     text-align: justify;
 }
-
-
 
 
 

@@ -35,8 +35,6 @@ export class HomeComponent implements OnInit {
   setupGsap(): void {
 // bismillah part
     gsap.timeline()
-    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
-    .fromTo(".r2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r4", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r5", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
