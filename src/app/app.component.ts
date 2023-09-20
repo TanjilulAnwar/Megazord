@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 // Animate the properties individually
 gsap.utils.toArray(".box").forEach(star => {
 
-  tweenProperty(star, "x", 100, window.innerWidth-100);
+  tweenProperty(star, "x", 100, window.innerWidth/1.8);
   tweenProperty(star, "y", 100, 2*(window.innerHeight-100));
 });
 

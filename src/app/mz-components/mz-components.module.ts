@@ -9,6 +9,7 @@ import { ButterflyComponent } from './butterfly/butterfly.component';
 import { MandalaComponent } from './mandala/mandala.component';
 import { MandalaReverseComponent } from './mandala-reverse/mandala-reverse.component';
 import { MajorComponent } from './major/major.component';
+import { FairyLightsComponent } from './fairy-lights/fairy-lights.component';
 
 const componentList =[
   TestComponent,
@@ -18,15 +19,13 @@ const componentList =[
   ButterflyComponent,
   MandalaComponent,
   MandalaReverseComponent,
-  MajorComponent
+  MajorComponent,
+  FairyLightsComponent,
 ]
 
 @NgModule({
   declarations: [
     ...componentList,
-   
-
-  
     
   ],
   imports: [

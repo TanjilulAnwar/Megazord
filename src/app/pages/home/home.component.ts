@@ -57,6 +57,7 @@ export class HomeComponent implements OnInit {
     .fromTo(".r7", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r8", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r9", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r10", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     // .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 2})
     // .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
     // .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
@@ -113,57 +114,6 @@ gsap.to(".owlHorned", {
 
 
 //parallax
-
-
-
-
-
-
-
-
-// Create a GSAP timeline
-let tl = gsap.timeline();
-
-// Define a function to generate random coordinates and angles
-function randomFly() {
-let x = gsap.utils.random(0, window.innerWidth - 100);
-let y = gsap.utils.random(0, window.innerHeight - 100);
-let rotation = gsap.utils.random(-180, 180);
-return {x: x, y: y, rotation: rotation};
-}
-
-// Animate the butterfly to fly randomly
-tl.to(".butterfly", {
-duration: 2,
-motionPath: {
-path: [randomFly(), randomFly(), randomFly(), randomFly()],
-curviness: 2,
-autoRotate: true
-},
-ease: "power1.inOut"
-});
-
-// Repeat the animation infinitely
-tl.repeat(-1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
