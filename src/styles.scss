@@ -40,7 +40,20 @@ $megazord-theme: mat.define-light-theme((
 
 
 
-html, body { height: 100%; }
+html, body { height: 100%;}
+html {
+  --s: 10px; /* control the size */
+  
+  --_g: #ffffff00 83%,#b09f7911 85% 99%,#ffffff00 101%;
+  background:
+    radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+    radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+    radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+    radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+    #ffffff;
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @font-face {
