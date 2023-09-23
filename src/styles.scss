@@ -44,7 +44,7 @@ html, body { height: 100%;}
 html {
   --s: 10px; /* control the size */
   
-  --_g: #ffffff00 83%,#b09f7911 85% 99%,#ffffff00 101%;
+  --_g: #ffffff00 83%,#b09f7933 85% 99%,#ffffff00 101%;
   background:
     radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
     radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
@@ -54,7 +54,7 @@ html {
   background-size: calc(2*var(--s)) calc(2*var(--s));
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;    background-color:transparent; }
 
 @font-face {
   font-family: dosis;

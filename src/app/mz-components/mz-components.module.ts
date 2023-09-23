@@ -11,6 +11,7 @@ import { MandalaReverseComponent } from './mandala-reverse/mandala-reverse.compo
 import { MajorComponent } from './major/major.component';
 import { FairyLightsComponent } from './fairy-lights/fairy-lights.component';
 import { RevealComponent } from './reveal/reveal.component';
+import { HaldiComponent } from './haldi/haldi.component';
 
 const componentList =[
   TestComponent,
@@ -23,11 +24,13 @@ const componentList =[
   MajorComponent,
   FairyLightsComponent,
   RevealComponent,
+  HaldiComponent,
 ]
 
 @NgModule({
   declarations: [
     ...componentList,
+
 
     
   ],

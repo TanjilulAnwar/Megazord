@@ -1,8 +1,9 @@
 $color-wing: pink;
-$color-sub-wing: lighten(dodgerblue, 10%);
+
 $color-background: #d6c18b;
 $color-twitter: #4099FF;
-
+$main-col: rgb(203, 30, 255);
+$color-sub-wing: lighten($main-col, 10%);
 html {
     box-sizing: border-box;  
 }
@@ -82,7 +83,7 @@ body {
     }
     
     .bit {
-        background: dodgerblue;
+        background: $main-col;
     }
     .bit::after {
         background: $color-sub-wing;
