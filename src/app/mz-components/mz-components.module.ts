@@ -12,6 +12,7 @@ import { MajorComponent } from './major/major.component';
 import { FairyLightsComponent } from './fairy-lights/fairy-lights.component';
 import { RevealComponent } from './reveal/reveal.component';
 import { HaldiComponent } from './haldi/haldi.component';
+import { WalimaComponent } from './walima/walima.component';
 
 const componentList =[
   TestComponent,
@@ -25,6 +26,7 @@ const componentList =[
   FairyLightsComponent,
   RevealComponent,
   HaldiComponent,
+  WalimaComponent,
 ]
 
 @NgModule({

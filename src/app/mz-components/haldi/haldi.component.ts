@@ -63,27 +63,6 @@ gsap.to(".right-lid", {
   }, 
 });
 
-// gsap.to(".lid", {
-//   yPercent: 0,
-//   xPercent: 0,
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".fluster",
-//     scrub: 1
-//   }, 
-// });
-
-
-// gsap.to(".plating", {
-//   yPercent: 0,
-//   xPercent:0,
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".fluster",
-//     scrub: 1
-//   }, 
-// });
-
 
 //parallax
   }
