@@ -1,29 +1,6 @@
-$color-wing: pink;
-
-$color-background: #d6c18b;
-$color-twitter: #4099FF;
-$main-col: rgb(203, 30, 255);
+$main-col: rgb(255, 30, 161);
 $color-sub-wing: lighten($main-col, 10%);
-html {
-    box-sizing: border-box;  
-}
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    align-items: center;
-    background: $color-background;
-    display: flex;
-    justify-content: center;
-    perspective-origin: 50% 50%;
-    perspective: 800px;
-}
 
 .butterfly {
     animation: hover 250ms cubic-bezier(.48,.01,.54,1) infinite;
@@ -172,20 +149,3 @@ body {
     }
 }
 
-
-// .twitter {    
-//     background: $color-twitter;
-//     border-radius: 5px;
-//     bottom: 5px;
-//     color: #fff;
-//     font-family: sans-serif;
-//     font-size: 13px;
-//     padding: 5px 10px;
-//     position: absolute;
-//     right: 5px;
-//     text-decoration: none;
-    
-//     &:hover {
-//         background: lighten($color-twitter,3%);
-//     }
-// }

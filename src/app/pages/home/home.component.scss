@@ -2,8 +2,8 @@
 @media screen and (max-width: 767px) {
     .letter-eng-2 {
     
-        font-family: 'dancing' !important;
-        font-size: 5vw;
+
+        font-size: 6vw;
         text-align: justify;
     }
 
@@ -15,19 +15,39 @@
 
 @media screen and (min-width: 768px) {
     .letter-eng-2 {
-        
-        font-family: 'dancing' !important;
-        font-size: 3vw;
-        text-align: justify;
+
+        font-size: 4vw;
+        text-align: left;
     }
     .row{
         margin: 5rem 0rem 5rem 0rem;
     }
     
 }
-.salam{
 
+
+  .letter-eng-2 {
+    font-family: 'dancing' !important;
+  
+    color: rgba(146, 12, 12, 0.829);
+  }
+.salam{
+    font-family: 'dancing-bold' !important;
     font-weight: 600;
+
+}
+.walima{
+    font-family: 'stadella' !important;
+  font-size: 100px;
+  text-align: center;
+
+
+}
+.headline{
+    font-family: 'dancing-bold' !important;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
 }
 
 .bismillah-arab {
@@ -49,7 +69,7 @@
 
 .bismillah-bang {
 
-    font-family: 'musta' !important;
+    font-family: 'charu' !important;
     font-size: 5vw;
     display: flex;
     justify-content: center;
@@ -98,7 +118,7 @@ section {
 }
 
 .mandala-img {
-    width: 50vw;
+    width: 15vw;
 }
 
 
@@ -126,7 +146,7 @@ section {
     position: absolute;
 }
 
-.dotsBlue {
+.couple {
     width: 100%;
     max-width: 50vw;
     height: auto;
@@ -134,7 +154,7 @@ section {
 
 }
 
-.owlHorned {
+.coupleBackground {
     width: 100%;
     max-width: 50vw;
     height: auto;
@@ -145,9 +165,34 @@ section {
     display: flex;
     justify-content: center;
 }
+.cntr-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.location{
+    color: purple;
+    text-decoration: none;
+}
 
 .no-side-space{
     padding: 0px !important;
     margin: 0px !important;
 }
 
+.filter-yellow{
+    filter: invert(82%) sepia(71%) saturate(2422%) hue-rotate(329deg) brightness(100%) contrast(102%);
+}
+.filter-green{
+    filter: invert(61%) sepia(70%) saturate(6778%) hue-rotate(62deg) brightness(84%) contrast(96%);
+}
+.filter-red{
+    filter: invert(16%) sepia(81%) saturate(6355%) hue-rotate(343deg) brightness(61%) contrast(120%);
+}
+.filter-blue{
+    filter: invert(97%) sepia(10%) saturate(0%) hue-rotate(142deg) brightness(88%) contrast(96%);
+  //  filter: invert(79%) sepia(0%) saturate(1%) hue-rotate(208deg) brightness(94%) contrast(102%);
+}

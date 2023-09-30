@@ -18,47 +18,47 @@ export class HaldiComponent implements OnInit {
     //parallax
 /* ------Great Horned Owl Sequence------  */
 
-gsap.set(".left-lid", { yPercent: 350, xPercent:-90});
-gsap.set(".center-lid", { yPercent: 330, xPercent:5});
-gsap.set(".right-lid", { yPercent: 350, xPercent:95});
+gsap.set(".left-lid", { yPercent: 125, xPercent:-90});
+gsap.set(".center-lid", { yPercent: 110, xPercent:5});
+gsap.set(".right-lid", { yPercent: 125, xPercent:95});
 gsap.set(".plating", { yPercent: 0, xPercent:0});
 
 gsap.to(".left-lid", {
-  yPercent: 250,
+  yPercent: 0,
   xPercent: -100,
   ease: "none",
   scrollTrigger: {
     start: "0% 50%",
     end: "bottom 100%",
     scrub: 2,
-    trigger: ".fluster"
+    trigger: ".trig-haldi"
 
   }, 
 });
 
 
 gsap.to(".center-lid", {
-  yPercent: 250,
+  yPercent: 0,
   xPercent: 5,
   ease: "none",
   scrollTrigger: {
     start: "0% 50%",
     end: "bottom 100%",
     scrub: 2,
-    trigger: ".fluster"
+    trigger: ".trig-haldi"
 
   }, 
 });
 
 gsap.to(".right-lid", {
-  yPercent: 250,
+  yPercent: 0,
   xPercent: 110,
   ease: "none",
   scrollTrigger: {
     start: "0% 50%",
     end: "bottom 100%",
     scrub: 2,
-    trigger: ".fluster"
+    trigger: ".trig-haldi"
 
   }, 
 });

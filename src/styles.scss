@@ -42,9 +42,9 @@ $megazord-theme: mat.define-light-theme((
 
 html, body { height: 100%;}
 html {
-  --s: 10px; /* control the size */
+  --s: 2vw; /* control the size */
   
-  --_g: #ffffff00 83%,#b09f7933 85% 99%,#ffffff00 101%;
+  --_g: #ffffff00 83%,#b09f7921 85% 99%,#ffffff00 101%;
   background:
     radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
     radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
@@ -79,5 +79,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;    backgrou
 
 @font-face {
   font-family: dancing;
-  src: url('./assets/fonts/dancing/DancingScript-Regular.ttf') format("opentype");
+  src: url('./assets/fonts/dancing/DancingScript-SemiBold.ttf') format("opentype");
+}
+@font-face {
+  font-family: dancing-bold;
+  src: url('./assets/fonts/dancing/DancingScript-Bold.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: charu;
+  src: url('./assets/fonts/Charulota/Li-Saboj_Charulota_Unicode_Bold.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: stadella;
+  src: url('./assets/fonts/stadella/Stadella.ttf') format("opentype");
 }

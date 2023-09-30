@@ -13,6 +13,8 @@ import { FairyLightsComponent } from './fairy-lights/fairy-lights.component';
 import { RevealComponent } from './reveal/reveal.component';
 import { HaldiComponent } from './haldi/haldi.component';
 import { WalimaComponent } from './walima/walima.component';
+import { NiqahComponent } from './niqah/niqah.component';
+import { HaldiFlowerComponent } from './haldi-flower/haldi-flower.component';
 
 const componentList =[
   TestComponent,
@@ -27,11 +29,14 @@ const componentList =[
   RevealComponent,
   HaldiComponent,
   WalimaComponent,
+  NiqahComponent,
+  HaldiFlowerComponent,
+
 ]
 
 @NgModule({
   declarations: [
-    ...componentList,
+    ...componentList
 
 
     

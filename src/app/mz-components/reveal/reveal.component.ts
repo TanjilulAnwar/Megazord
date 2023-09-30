@@ -20,46 +20,53 @@ export class RevealComponent implements OnInit {
   
     const leftLeaves = document.querySelectorAll('[href="#leftLeave"]');
     const rightLeaves = document.querySelectorAll('[href="#rightLeave"]');
-    const smallLeaves = document.querySelectorAll('[href="#smallLeaf"]');
-    const text = document.querySelector('.text');
-    const letters = document.querySelectorAll('.text path');
+
     leftLeaves.forEach((leaf, i) => {
       const index = i/ (leftLeaves.length - 1);
       gsap.set(leaf, {
         rotate: index * -45 + 10,
         transformOrigin: 'right bottom'
       });
+   
+
       gsap.to(leaf, {
         scrollTrigger: {
-          trigger: ".r13",
-          scrub: 1,
-        //  start: `${index * 40}% top`,
-         //  end: `${index * 60 + 40}% bottom`,
+          trigger: ".trig-mehedi",
+          scrub: 1
         },
         x: 150,
         y: 300,
         rotate: 15 - (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10),
         scale: 1.3
       });
+
+
+
     });
+
+
+    
     rightLeaves.forEach((leaf, i) => {
       const index = i / (rightLeaves.length - 1);
       gsap.set(leaf, {
         rotate: index * 45 - 10,
         transformOrigin: 'left bottom'
       });
+    
+
       gsap.to(leaf, {
         scrollTrigger: {
-          trigger: ".r13",
-          scrub: 1,
-        //=   start: `${index * 40}% top`,
-         //  end: `${index * 60 + 40}% bottom`,
+          trigger: ".trig-mehedi",
+          scrub: 1
         },
         x: -150,
         y: 300,
         rotate: -15 + (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10),
         scale: 1.3
       });
+
+
+
     });
     
 

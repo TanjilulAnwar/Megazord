@@ -48,8 +48,12 @@ export class HomeComponent implements OnInit {
 
 
 
-// bismillah part
+// timeline appearence
+
+
     gsap.timeline()
+    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 1})
+    .fromTo(".r2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.9})
     .fromTo(".r4", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r5", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
@@ -58,19 +62,22 @@ export class HomeComponent implements OnInit {
     .fromTo(".r8", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r9", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r10", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
-    // .fromTo(".msg1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 2})
-    // .fromTo(".msg2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
-    // .fromTo(".msg3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
-    // .fromTo(".mandala", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.5})
+    .fromTo(".r11", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r12", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r13", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r14", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r15", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r16", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r17", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r18", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+  
    
 //
 
 
-
-//mandala part
+//mandala rotation
     gsap.timeline({
       scrollTrigger:{
-       // trigger: ".mandala-img",
         pin: true,
         scrub:1,
         start: 'top top',
@@ -86,12 +93,11 @@ export class HomeComponent implements OnInit {
 //
 
 //parallax
-/* ------Great Horned Owl Sequence------  */
 
-gsap.set(".dotsBlue", { yPercent: -2, xPercent:-5});
-gsap.set(".owlHorned", { yPercent: 0, xPercent:5});
+gsap.set(".couple", { yPercent: -2, xPercent:-5});
+gsap.set(".coupleBackground", { yPercent: 0, xPercent:5});
 
-gsap.to(".dotsBlue", {
+gsap.to(".couple", {
   yPercent: -2,
   xPercent: 5,
   ease: "none",
@@ -102,7 +108,7 @@ gsap.to(".dotsBlue", {
 });
 
 
-gsap.to(".owlHorned", {
+gsap.to(".coupleBackground", {
   yPercent: 0,
   xPercent:-5,
   ease: "none",
