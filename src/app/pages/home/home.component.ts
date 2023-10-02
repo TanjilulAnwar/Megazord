@@ -80,8 +80,8 @@ export class HomeComponent implements OnInit {
       scrollTrigger:{
         pin: true,
         scrub:1,
-        start: 'top top',
-        end:'+=10000',
+        // start: 'top top',
+        // end:'+=10000',
       }
     })
     .to('.mandala-img', {
