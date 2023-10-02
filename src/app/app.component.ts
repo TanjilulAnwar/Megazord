@@ -24,7 +24,7 @@ ngOnInit(): void {
     gsap.utils.toArray(".flyers").forEach(star => {
 
       tweenProperty(star, "x", 100, window.innerWidth / 1.8);
-      tweenProperty(star, "y", 100, 2 * (window.innerHeight - 100));
+      tweenProperty(star, "y", 0, (5* (window.innerHeight))-100);
     });
 
 

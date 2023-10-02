@@ -56,42 +56,24 @@ html {
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;    background-color:transparent; }
 
-@font-face {
-  font-family: dosis;
-  src: url('./assets/fonts/dosis/Dosis-Medium.ttf') format("opentype");
-}
 
-@font-face {
-  font-family: work-sans;
-  src: url('./assets/fonts/work-sans/WorkSans-SemiBold.ttf') format("opentype");
-}
-
-@font-face {
-  font-family: overpass;
-  src: url('./assets/fonts/overpass/Overpass-SemiBold.ttf') format("opentype");
-}
-
-@font-face {
-  font-family: musta;
-  src: url('./assets/fonts/bangla-a/Mustafa_Italic.ttf') format("opentype");
-}
 
 
 @font-face {
   font-family: dancing;
-  src: url('./assets/fonts/dancing/DancingScript-SemiBold.ttf') format("opentype");
+  src: url('./assets/fonts/DancingScript-SemiBold.woff') format("opentype");
 }
 @font-face {
   font-family: dancing-bold;
-  src: url('./assets/fonts/dancing/DancingScript-Bold.ttf') format("opentype");
+  src: url('./assets/fonts/DancingScript-Bold.woff') format("opentype");
 }
 
 @font-face {
   font-family: charu;
-  src: url('./assets/fonts/Charulota/Li-Saboj_Charulota_Unicode_Bold.ttf') format("opentype");
+  src: url('./assets/fonts/Li-Saboj_Charulota_Unicode_Bold.woff') format("opentype");
 }
 
 @font-face {
   font-family: stadella;
-  src: url('./assets/fonts/stadella/Stadella.ttf') format("opentype");
+  src: url('./assets/fonts/Stadella.woff') format("opentype");
 }

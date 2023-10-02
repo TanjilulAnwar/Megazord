@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
- // schemas:[CUSTOM_ELEMENTS_SCHEMA],
+ 
   declarations: [
     AppComponent,
     NavigationComponent,

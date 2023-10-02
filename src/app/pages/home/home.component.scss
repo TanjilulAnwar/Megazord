@@ -4,7 +4,7 @@
     
 
         font-size: 6vw;
-        text-align: justify;
+   
     }
 
     .row{
@@ -17,7 +17,6 @@
     .letter-eng-2 {
 
         font-size: 4vw;
-        text-align: left;
     }
     .row{
         margin: 5rem 0rem 5rem 0rem;
@@ -28,7 +27,7 @@
 
   .letter-eng-2 {
     font-family: 'dancing' !important;
-  
+    text-align: justify;
     color: rgba(146, 12, 12, 0.829);
   }
 .salam{
@@ -183,16 +182,3 @@ section {
     margin: 0px !important;
 }
 
-.filter-yellow{
-    filter: invert(82%) sepia(71%) saturate(2422%) hue-rotate(329deg) brightness(100%) contrast(102%);
-}
-.filter-green{
-    filter: invert(61%) sepia(70%) saturate(6778%) hue-rotate(62deg) brightness(84%) contrast(96%);
-}
-.filter-red{
-    filter: invert(16%) sepia(81%) saturate(6355%) hue-rotate(343deg) brightness(61%) contrast(120%);
-}
-.filter-blue{
-    filter: invert(97%) sepia(10%) saturate(0%) hue-rotate(142deg) brightness(88%) contrast(96%);
-  //  filter: invert(79%) sepia(0%) saturate(1%) hue-rotate(208deg) brightness(94%) contrast(102%);
-}

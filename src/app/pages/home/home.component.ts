@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as guestData from '../../../assets/guestList.json';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-import { Guest } from 'src/app/models/guest.model';
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Title } from '@angular/platform-browser';
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
@@ -18,29 +13,12 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 })
 export class HomeComponent implements OnInit {
 
-  data: Guest[] = guestData;
-  guestModel:Guest | undefined ;
-  constructor(private route: ActivatedRoute, public title:Title) {
-    let id = this.route.snapshot.paramMap.get('guestId');
-    if(id){
-      title.setTitle(id)
-    }
-    else{
-      title.setTitle('Beautiful')
-    }
 
+  constructor() {
 
   }
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('guestId');
-    if(id){
-          this.guestModel = Array.from(this.data).find(x=>x.id == id)
-
-   // console.log('Data', this.data);
-   console.log(this.guestModel);
-    }
-
     this.setupGsap();
   }
 
@@ -52,7 +30,7 @@ export class HomeComponent implements OnInit {
 
 
     gsap.timeline()
-    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 1})
+    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 2})
     .fromTo(".r2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.9})
     .fromTo(".r4", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
@@ -70,9 +48,11 @@ export class HomeComponent implements OnInit {
     .fromTo(".r16", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r17", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r18", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
-  
+    .fromTo(".r19", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r20", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
    
 //
+
 
 
 //mandala rotation
@@ -85,7 +65,7 @@ export class HomeComponent implements OnInit {
       }
     })
     .to('.mandala-img', {
-      rotation:360*6,
+      rotation:360*3,
       duration:1, ease:'none',
     })
 

@@ -18,7 +18,7 @@ export class HaldiComponent implements OnInit {
     //parallax
 /* ------Great Horned Owl Sequence------  */
 
-gsap.set(".left-lid", { yPercent: 125, xPercent:-90});
+gsap.set(".left-lid", { yPercent: 130, xPercent:-90});
 gsap.set(".center-lid", { yPercent: 110, xPercent:5});
 gsap.set(".right-lid", { yPercent: 125, xPercent:95});
 gsap.set(".plating", { yPercent: 0, xPercent:0});

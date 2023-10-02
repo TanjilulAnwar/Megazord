@@ -18,8 +18,8 @@ export class RevealComponent implements OnInit {
   
   setupGsap(){
   
-    const leftLeaves = document.querySelectorAll('[href="#leftLeave"]');
-    const rightLeaves = document.querySelectorAll('[href="#rightLeave"]');
+    const leftLeaves = document.querySelectorAll("#leftLeave");
+    const rightLeaves = document.querySelectorAll("#rightLeave");
 
     leftLeaves.forEach((leaf, i) => {
       const index = i/ (leftLeaves.length - 1);
@@ -32,7 +32,7 @@ export class RevealComponent implements OnInit {
       gsap.to(leaf, {
         scrollTrigger: {
           trigger: ".trig-mehedi",
-          scrub: 1
+          scrub: 2
         },
         x: 150,
         y: 300,
@@ -57,7 +57,7 @@ export class RevealComponent implements OnInit {
       gsap.to(leaf, {
         scrollTrigger: {
           trigger: ".trig-mehedi",
-          scrub: 1
+          scrub: 2
         },
         x: -150,
         y: 300,
@@ -73,7 +73,7 @@ export class RevealComponent implements OnInit {
     
     // Hack to hide the render of the SVG
     requestAnimationFrame(() => {
-      const leftLeaves = document.querySelector('svg')  ;
+      const leftLeaves = document.getElementById('bigStuff')  ;
       if(leftLeaves){
               leftLeaves.style.opacity = '1';
       }
