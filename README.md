@@ -1,6 +1,6 @@
-# Megazord
+# Majestic
 
-<img src="https://github.com/TanjilulAnwar/megazord/blob/master/Megazord.webp" alt="drawing" width="200"/>
+<img src="https://github.com/TanjilulAnwar/megazord/blob/master/floral.png" alt="drawing" width="200"/>
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
