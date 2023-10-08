@@ -1,28 +1,26 @@
-/* Add application styles & imports to this file! */
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-  }
-  
-  main {
-    background-color: rgb(18, 18, 19);
-  }
-  
-  .box {
-    width: 300px;
-    height: 300px;
-    background-color: blueviolet;
-    border-radius: 25px;
-    margin: 0 auto;
-  }
-  
-  .section {
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-  }
-  
+
+.hands{
+  width: 100%;
+  max-width: 100vw;
+  height: 70vw;
+position: relative;
+}
+
+.left-finger{
+position: absolute;
+}
+
+.right-hand{
+  width: 100%;
+  max-width: 100vw;
+  height: 100vw;
+  position: relative;
+}
+
+.right-finger{
+  position: absolute;
+}
+
+.finger-img{
+width:15vw;
+}

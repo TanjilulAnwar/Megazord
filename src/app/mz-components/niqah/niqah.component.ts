@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 })
 export class NiqahComponent implements OnInit {
   ngOnInit(): void {
-    this.setupGsap()
+   this.setupGsap()
  }
  setupGsap(){
 

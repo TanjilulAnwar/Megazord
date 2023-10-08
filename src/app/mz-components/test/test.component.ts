@@ -13,23 +13,61 @@ export class TestComponent implements OnInit {
 
 
   ngOnInit() {
-    this.setupGsap();
+   this.setupGsap();
   }
 
   setupGsap(): void {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.container',
-        start: 'top center', // when the top of the trigger hits the top of the viewport
-        end: '+=400', // end after scrolling 500px beyond the start
-        scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      },
+    const leftLeaves = document.querySelectorAll(".left-finger");
+    const rightLeaves = document.querySelectorAll(".right-finger");
+
+    leftLeaves.forEach((leaf, i) => {
+      const index = i/ (leftLeaves.length - 1);
+      gsap.set(leaf, {
+       rotate:   15- (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10), 
+        transformOrigin: 'right bottom',
+        x:50
+      });
+   
+
+      gsap.to(leaf, {
+        scrollTrigger: {
+          trigger: ".trig-mehedi",
+          scrub: 3
+        },
+     //  x: -150,
+     //   y: 300,
+        rotate: index * -45 + 10 ,
+       //scale: 1.3
+      });
+
+
+
     });
 
-    tl.from('.box', {
-      backgroundColor: '#28a92b',
-      rotation: 360,
-      scale: 0,
+
+    
+    rightLeaves.forEach((leaf, i) => {
+      const index = i / (rightLeaves.length - 1);
+      gsap.set(leaf, {
+        rotate:-15 + (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10) ,
+        transformOrigin: 'left bottom',
+        x:800
+      });
+    
+
+      gsap.to(leaf, {
+        scrollTrigger: {
+          trigger: ".trig-mehedi",
+          scrub: 3
+        },
+    //    x: 150,
+   //     y: 300,
+        rotate: index * 45 - 10,
+      //  scale: 1.3
+      });
+
+
+
     });
   }
 }

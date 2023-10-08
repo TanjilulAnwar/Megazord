@@ -72,12 +72,12 @@ export class RevealComponent implements OnInit {
 
     
     // Hack to hide the render of the SVG
-    requestAnimationFrame(() => {
-      const leftLeaves = document.getElementById('bigStuff')  ;
-      if(leftLeaves){
-              leftLeaves.style.opacity = '1';
-      }
+    // requestAnimationFrame(() => {
+    //   const leftLeaves = document.getElementById('bigStuff')  ;
+    //   if(leftLeaves){
+    //           leftLeaves.style.opacity = '1';
+    //   }
 
-    });
+    // });
   }
 }

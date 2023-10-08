@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setupGsap();
+  this.setupGsap();
   }
 
   setupGsap(): void {
