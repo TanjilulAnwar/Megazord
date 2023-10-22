@@ -30,9 +30,9 @@ export class HomeComponent implements OnInit {
 
 
     gsap.timeline()
-    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 2})
-    .fromTo(".r2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
-    .fromTo(".r3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.9})
+    .fromTo(".r1", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 1})
+    .fromTo(".r2", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 1})
+    .fromTo(".r3", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 1})
     .fromTo(".r4", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r5", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r6", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
@@ -50,6 +50,8 @@ export class HomeComponent implements OnInit {
     .fromTo(".r18", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r19", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r20", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r21", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
+    .fromTo(".r22", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
    
 //
 

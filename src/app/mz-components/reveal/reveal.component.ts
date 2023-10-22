@@ -17,67 +17,32 @@ export class RevealComponent implements OnInit {
 
   
   setupGsap(){
+
+
+    gsap.set(".left-hand", { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
+    gsap.set(".right-hand",  { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
+
+    gsap.to(".left-hand", {
+      scrollTrigger: {
+        trigger: ".trig-mehedi",
+        scrub: 2
+      },
+      x: 0,
+      y: 0,
+      rotate: 20,
+      scale: 1.2
+    });
+
+    gsap.to(".right-hand", {
+      scrollTrigger: {
+        trigger: ".trig-mehedi",
+        scrub: 2
+      },
+      x: 0,
+      y: 0,
+      rotate: -20,
+      scale: 1.2
+    });
   
-    const leftLeaves = document.querySelectorAll("#leftLeave");
-    const rightLeaves = document.querySelectorAll("#rightLeave");
-
-    leftLeaves.forEach((leaf, i) => {
-      const index = i/ (leftLeaves.length - 1);
-      gsap.set(leaf, {
-        rotate: index * -45 + 10,
-        transformOrigin: 'right bottom'
-      });
-   
-
-      gsap.to(leaf, {
-        scrollTrigger: {
-          trigger: ".trig-mehedi",
-          scrub: 2
-        },
-        x: 150,
-        y: 300,
-        rotate: 15 - (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10),
-        scale: 1.3
-      });
-
-
-
-    });
-
-
-    
-    rightLeaves.forEach((leaf, i) => {
-      const index = i / (rightLeaves.length - 1);
-      gsap.set(leaf, {
-        rotate: index * 45 - 10,
-        transformOrigin: 'left bottom'
-      });
-    
-
-      gsap.to(leaf, {
-        scrollTrigger: {
-          trigger: ".trig-mehedi",
-          scrub: 2
-        },
-        x: -150,
-        y: 300,
-        rotate: -15 + (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10),
-        scale: 1.3
-      });
-
-
-
-    });
-    
-
-    
-    // Hack to hide the render of the SVG
-    // requestAnimationFrame(() => {
-    //   const leftLeaves = document.getElementById('bigStuff')  ;
-    //   if(leftLeaves){
-    //           leftLeaves.style.opacity = '1';
-    //   }
-
-    // });
   }
 }

@@ -1,26 +1,46 @@
-
-.hands{
+.kluster {
+  display: flex;
+  justify-content: center;
+  position: relative;
   width: 100%;
   max-width: 100vw;
   height: 70vw;
-position: relative;
+
 }
 
-.left-finger{
-position: absolute;
-}
-
-.right-hand{
-  width: 100%;
-  max-width: 100vw;
-  height: 100vw;
-  position: relative;
-}
-
-.right-finger{
+.klusterPieces {
   position: absolute;
 }
 
-.finger-img{
-width:15vw;
+.mirror-frame{
+  width: 100%;
+  max-width: 70vw;
+  height: auto;
+  z-index:4;
+
 }
+.mirror-glass{
+  width: 100%;
+  max-width: 70vw;
+  height: auto;
+  z-index: 1;
+
+}
+
+
+.bride{
+  width: 100%;
+  max-width: 28vw;
+  height: auto;
+  z-index: 3;
+
+}
+
+.groom{
+  width: 100%;
+  max-width: 33vw;
+  height: auto;
+  z-index: 2;
+
+}
+

@@ -17,58 +17,36 @@ export class TestComponent implements OnInit {
   }
 
   setupGsap(): void {
-    const leftLeaves = document.querySelectorAll(".left-finger");
-    const rightLeaves = document.querySelectorAll(".right-finger");
 
-    leftLeaves.forEach((leaf, i) => {
-      const index = i/ (leftLeaves.length - 1);
-      gsap.set(leaf, {
-       rotate:   15- (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10), 
-        transformOrigin: 'right bottom',
-        x:50
-      });
-   
-
-      gsap.to(leaf, {
-        scrollTrigger: {
-          trigger: ".trig-mehedi",
-          scrub: 3
-        },
-     //  x: -150,
-     //   y: 300,
-        rotate: index * -45 + 10 ,
-       //scale: 1.3
-      });
+    gsap.set(".mirror-frame", { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
+    gsap.set(".mirror-glass",  { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
+    gsap.set(".bride",  { yPercent: 150, xPercent:-50, rotate:0, transformOrigin: 'bottom center'});
+    gsap.set(".groom",  { yPercent: 100, xPercent:50, rotate:0, transformOrigin: 'bottom center'});
 
 
+    gsap.to(".bride", {
+      scrollTrigger: {
+        trigger: ".trig-niqah",
+        scrub: 3
+      },
+      x: 0,
+      y: 0,
+      rotate: 20,
+      scale: 1.2
+    });
 
+    gsap.to(".groom", {
+      scrollTrigger: {
+        trigger: ".trig-niqah",
+        scrub: 3
+      },
+      x: 0,
+      y: 0,
+      rotate: -20,
+      scale: 1.2
     });
 
 
-    
-    rightLeaves.forEach((leaf, i) => {
-      const index = i / (rightLeaves.length - 1);
-      gsap.set(leaf, {
-        rotate:-15 + (Math.sin(index * Math.PI / 2 - (Math.PI / 2)) * 10) ,
-        transformOrigin: 'left bottom',
-        x:800
-      });
-    
-
-      gsap.to(leaf, {
-        scrollTrigger: {
-          trigger: ".trig-mehedi",
-          scrub: 3
-        },
-    //    x: 150,
-   //     y: 300,
-        rotate: index * 45 - 10,
-      //  scale: 1.3
-      });
-
-
-
-    });
   }
 }
 
