@@ -20,8 +20,8 @@ export class TestComponent implements OnInit {
 
     gsap.set(".mirror-frame", { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
     gsap.set(".mirror-glass",  { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
-    gsap.set(".bride",  { yPercent: 150, xPercent:-50, rotate:0, transformOrigin: 'bottom center'});
-    gsap.set(".groom",  { yPercent: 100, xPercent:50, rotate:0, transformOrigin: 'bottom center'});
+    gsap.set(".bride",  { yPercent: 190, xPercent:-50, rotate:0, transformOrigin: 'bottom center'});
+    gsap.set(".groom",  { yPercent: 90, xPercent:50, rotate:0, transformOrigin: 'bottom center'});
 
 
     gsap.to(".bride", {
@@ -29,8 +29,7 @@ export class TestComponent implements OnInit {
         trigger: ".trig-niqah",
         scrub: 3
       },
-      x: 0,
-      y: 0,
+
       rotate: 20,
       scale: 1.2
     });
@@ -40,8 +39,7 @@ export class TestComponent implements OnInit {
         trigger: ".trig-niqah",
         scrub: 3
       },
-      x: 0,
-      y: 0,
+
       rotate: -20,
       scale: 1.2
     });

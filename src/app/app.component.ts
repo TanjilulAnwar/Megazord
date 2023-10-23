@@ -12,6 +12,14 @@ gsap.registerPlugin(ScrollTrigger, Draggable);
 })
 export class AppComponent implements OnInit {
  
+  componentLoading= true;
+
+
+  
+
+
+
+
 ngOnInit(): void {
     this.setupGsap();
   }

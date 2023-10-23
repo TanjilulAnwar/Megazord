@@ -22,20 +22,6 @@ gsap.set(".duat", { yPercent: 520, xPercent:110});
 gsap.set(".duat-x", { yPercent: 520, xPercent:110});
 gsap.set(".papyrus", { yPercent: -30, xPercent:0});
 
-// gsap.to(".red-quilt", {
-//  yPercent: 50,
-//  xPercent: 40,
-//  rotate:80,
-//  ease: "none",
-//  scrollTrigger: {
-//    start: "0% 50%",
-//    end: "bottom 100%",
-//    scrub: 2,
-//    trigger: ".vluster"
-
-//  }, 
-
-// });
 
 
 

@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     .fromTo(".r21", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
     .fromTo(".r22", { y: 10, opacity: 0}, {opacity: 1, y: 1, duration: 0.3})
    
-//
+
 
 
 
