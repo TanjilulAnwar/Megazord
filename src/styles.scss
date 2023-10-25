@@ -1,78 +1,38 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$megazord-primary: mat.define-palette(mat.$indigo-palette);
-$megazord-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$megazord-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$megazord-theme: mat.define-light-theme((
-  color: (
-    primary: $megazord-primary,
-    accent: $megazord-accent,
-    warn: $megazord-warn,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($megazord-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
 
 
-html, body { height: 100%;
+html { 
+//  background-image: linear-gradient(rgb(238, 222, 255) 18% , rgb(255, 223, 202) ,rgb(202, 255, 218),rgb(255, 202, 211), rgb(255, 245, 233));
+  background-color: rgb(255, 245, 233);
+}
+// html {
+//   --s: 2vw; /* control the size */
   
-  //background-color: rgb(255, 245, 233);
-}
-html {
-  --s: 2vw; /* control the size */
-  
-  --_g: #ffffff00 83%,#b09f7921 85% 99%,#ffffff00 101%;
-  background:
-    radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
-    radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
-    radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
-    radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
-    #ffffff;
-  background-size: calc(2*var(--s)) calc(2*var(--s));
-}
+//   --_g: #ffffff00 83%,#b09f7921 85% 99%,#ffffff00 101%;
+//   background:
+//     radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+//     radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+//     radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+//     radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+//     #ffffff;
+//   background-size: calc(2*var(--s)) calc(2*var(--s));
+// }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;    background-color:transparent; }
+body {height: 100%; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;    background-color:transparent; }
 
 
 
 
-@font-face {
-  font-family: dancing;
-  src: url('./assets/fonts/DancingScript-SemiBold.woff') format("opentype");
-}
-@font-face {
-  font-family: dancing-bold;
-  src: url('./assets/fonts/DancingScript-Bold.woff') format("opentype");
-}
-
-
-
+// @font-face {
+//   font-family: dancing;
+//   src: url('./assets/fonts/DancingScript-SemiBold.woff') format("opentype");
+// }
+// @font-face {
+//   font-family: dancing-bold;
+//   src: url('./assets/fonts/DancingScript-Bold.woff') format("opentype");
+// }
 @font-face {
   font-family: stadella;
   src: url('./assets/fonts/Stadella.woff') format("opentype");

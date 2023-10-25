@@ -1,10 +1,7 @@
 
 @media screen and (max-width: 767px) {
     .letter-eng-2 {
-    
-
         font-size: 6vw;
-   
     }
 
     .row{
@@ -15,7 +12,6 @@
 
 @media screen and (min-width: 768px) {
     .letter-eng-2 {
-
         font-size: 4vw;
     }
     .row{
@@ -26,13 +22,16 @@
 
 
   .letter-eng-2 {
-    font-family: 'dancing' !important;
+   // font-family: 'dancing' !important;
+   font-family: 'Dancing Script', cursive;
+font-weight: 600;
     text-align: justify;
     color: rgba(146, 12, 12, 0.829);
   }
 .salam{
-    font-family: 'dancing-bold' !important;
-    font-weight: 600;
+  //  font-family: 'dancing-bold' !important;
+  font-family: 'Dancing Script', cursive;
+    font-weight: 700;
 
 }
 .walima{
@@ -43,8 +42,11 @@
 
 }
 .headline{
-    font-family: 'dancing-bold' !important;
-    font-weight: 600;
+    // font-family: 'dancing-bold' !important;
+    // font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+
     display: flex;
     justify-content: center;
 }
@@ -58,12 +60,12 @@
 }
 
 .none-select {
+    pointer-events:none;
     -webkit-user-select: none;
     /* Safari */
     -ms-user-select: none;
     /* IE 10 and IE 11 */
     user-select: none;
-    /* Standard syntax */
 }
 
 .bismillah-bang {
@@ -81,7 +83,10 @@
 
 .bismillah-eng {
 
-    font-family: 'dancing' !important;
+   // font-family: 'dancing' !important;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+
     font-size: 5vw;
     display: flex;
     justify-content: center;
@@ -92,7 +97,10 @@
 
 .letter-eng {
 
-    font-family: 'dancing' !important;
+   // font-family: 'dancing' !important;
+   font-family: 'Dancing Script', cursive;
+   font-weight: 600;
+
     font-size: 3vw;
     display: flex;
     justify-content: center;

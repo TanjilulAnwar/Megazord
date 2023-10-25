@@ -1,121 +1,84 @@
-    .bismillah-arab {
+$globe-width:   1vw;
+$globe-height:  1vw;
+$globe-spacing: .2vw;
+$globe-spread: 3px;
+$light-off-opacity: 0.4;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+.gluster {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 70vw;
 
+}
 
-    }
+.lightBulb{
+    position: absolute;
+    animation-fill-mode: both; 
+    animation-iteration-count:infinite;
+    margin: 0;
+    padding: 0;
+    display: block;
 
-    .none-select {
-        -webkit-user-select: none;
-        /* Safari */
-        -ms-user-select: none;
-        /* IE 10 and IE 11 */
-        user-select: none;
-        /* Standard syntax */
-    }
+    width: 100%;
+    max-width:$globe-width;
+    height: $globe-height;
+  //  width: $globe-width;
+ //  height: $globe-height;
 
-    .bismillah-bang {
-
-        font-family: 'musta' !important;
-        font-size: 5vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .bismillah-eng {
-
-        font-family: 'dancing' !important;
-        font-size: 5vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+    border-radius: 100%;
+    margin: $globe-spacing/2;
+    display: inline-block;
 
 
-    .letter-eng {
+}
 
-        font-family: 'dancing' !important;
-        font-size: 3vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: justify;
-    }
+.odd{
+    animation-duration: 1.8s;
+}
 
-    .salam{
-        font-weight: 500;
-    }
-    .letter-eng-2 {
+.setx{
+    animation-duration: 1.4s;
+}
 
-        font-family: 'dancing' !important;
-        font-size: 3vw;
-        text-align: justify;
-    }
-    .bismillah-img {
-        width: 95%;
-    }
+.green{
+    background: rgba(0,247,165,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,1);
+    animation-name: flash-1;
+    animation-duration: 2s;
+}
+.red{
+    background: rgba(247,0,148,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);
+    animation-name: flash-3;
+    animation-duration: 1.1s;
+}
 
-    section {
-        height: 100vh;
-        width: 100%;
-        position: relative;
-        padding: 0;
-
-
-    }
-
-    .mandala-img {
-        width: 50vw;
-    }
+.blue{
+    background: rgba(0,255,255,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,255,0.5);
+    animation-name: flash-2;
+    animation-duration: 0.4s;
+}
 
 
-    .mandala {
-
-        display: flex;
-    }
-
-
-
-
-
-
-    .cluster {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        max-width: 50vw;
-        height: 50vw;
-
-    }
-
-    .clusterPieces {
-        position: absolute;
-    }
-
-    .dotsBlue {
-        width: 100%;
-        max-width: 50vw;
-        height: auto;
-        z-index: 2;
- 
-    }
-
-    .owlHorned {
-        width: 100%;
-        max-width: 50vw;
-        height: auto;
-        z-index: 1;
-    }
-
-    .cntr{
-  display: flex;
-  justify-content: center;
-    }
-    
+@keyframes flash-1 { 
+    0%, 100% { background: rgba(0,247,165,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,1);} 
+    50% { background: rgba(0,247,165,$light-off-opacity);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,0.2);}
+}
+@keyframes flash-2 { 
+    0%, 100% { background: rgba(0,255,255,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,255,1);} 
+    50% { background: rgba(0,255,255,$light-off-opacity);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,255,0.2);}
+}
+@keyframes flash-3 { 
+    0%, 100% { background: rgba(247,0,148,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);} 
+    50% { background: rgba(247,0,148,$light-off-opacity);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,0.2);}
+}

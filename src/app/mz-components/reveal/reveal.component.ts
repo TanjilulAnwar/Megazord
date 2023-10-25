@@ -20,14 +20,14 @@ export class RevealComponent implements OnInit {
   setupGsap(){
 
 var y = 200
-    gsap.set(".left-hand", { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
-    gsap.set(".right-hand",  { yPercent: 0, xPercent:0, rotate:0, transformOrigin: 'bottom center'});
-    gsap.set(".lv1",  { yPercent: y, xPercent:0, rotate:20, transformOrigin: 'bottom center'});
-    gsap.set(".lv2",  { yPercent: y, xPercent:0, rotate:10, transformOrigin: 'bottom center'});
-    gsap.set(".lv3",  { yPercent: y, xPercent:0, rotate:5, transformOrigin: 'bottom center'});
-    gsap.set(".lv4",  { yPercent: y, xPercent:0, rotate:-5, transformOrigin: 'bottom center'});
-    gsap.set(".lv5",  { yPercent: y, xPercent:0, rotate:-10, transformOrigin: 'bottom center'});
-    gsap.set(".lv6",  { yPercent: y, xPercent:0, rotate:-20, transformOrigin: 'bottom center'});
+    gsap.set(".left-hand", { yPercent: 0, xPercent:0, rotate:5, transformOrigin: 'bottom center'});
+    gsap.set(".right-hand",  { yPercent: 0, xPercent:0, rotate:-5, transformOrigin: 'bottom center'});
+    gsap.set(".lv1",  { yPercent: y, xPercent:0, rotate:30, transformOrigin: 'bottom center'});
+    gsap.set(".lv2",  { yPercent: y, xPercent:0, rotate:20, transformOrigin: 'bottom center'});
+    gsap.set(".lv3",  { yPercent: y, xPercent:0, rotate:15, transformOrigin: 'bottom center'});
+    gsap.set(".lv4",  { yPercent: y, xPercent:0, rotate:-15, transformOrigin: 'bottom center'});
+    gsap.set(".lv5",  { yPercent: y, xPercent:0, rotate:-20, transformOrigin: 'bottom center'});
+    gsap.set(".lv6",  { yPercent: y, xPercent:0, rotate:-30, transformOrigin: 'bottom center'});
 
 
     gsap.to(".lv1", {
@@ -36,8 +36,8 @@ var y = 200
         scrub: 2
       },
 
-      rotate: 30,
-      scale: 1.2
+      rotate: 35,
+    //  scale: 1.2
     });
     gsap.to(".lv2", {
       scrollTrigger: {
@@ -45,8 +45,8 @@ var y = 200
         scrub: 2
       },
 
-      rotate: 20,
-      scale: 1.2
+      rotate: 25,
+  //    scale: 1.2
     });
     gsap.to(".lv3", {
       scrollTrigger: {
@@ -54,8 +54,8 @@ var y = 200
         scrub: 2
       },
 
-      rotate: 10,
-      scale: 1.2
+      rotate: 15,
+ //     scale: 1.2
     });
     gsap.to(".lv4", {
       scrollTrigger: {
@@ -63,8 +63,8 @@ var y = 200
         scrub: 2
       },
 
-      rotate: -10,
-      scale: 1.2
+      rotate: -15,
+ //     scale: 1.2
     });
 
     gsap.to(".lv5", {
@@ -73,8 +73,8 @@ var y = 200
         scrub: 2
       },
 
-      rotate: -20,
-      scale: 1.2
+      rotate: -25,
+  //    scale: 1.2
     });
     gsap.to(".lv6", {
       scrollTrigger: {
@@ -82,18 +82,16 @@ var y = 200
         scrub: 2
       },
 
-      rotate: -30,
-      scale: 1.2
+      rotate: -35,
+  //    scale: 1.2
     });
     gsap.to(".left-hand", {
       scrollTrigger: {
         trigger: ".trig-mehedi",
         scrub: 2
       },
-      x: 0,
-      y: 0,
-      rotate: 10,
-      scale: 1.2
+      rotate: 15,
+   //   scale: 1.2
     });
 
     gsap.to(".right-hand", {
@@ -101,10 +99,8 @@ var y = 200
         trigger: ".trig-mehedi",
         scrub: 2
       },
-      x: 0,
-      y: 0,
-      rotate: -20,
-      scale: 1.2
+      rotate: -25,
+  //    scale: 1.2
     });
   
   }

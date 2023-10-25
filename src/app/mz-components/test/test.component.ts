@@ -26,7 +26,7 @@ export class TestComponent implements OnInit {
 
     gsap.to(".bride", {
       scrollTrigger: {
-        trigger: ".trig-niqah",
+        trigger: ".trig-niqah2",
         scrub: 3
       },
 
@@ -36,7 +36,7 @@ export class TestComponent implements OnInit {
 
     gsap.to(".groom", {
       scrollTrigger: {
-        trigger: ".trig-niqah",
+        trigger: ".trig-niqah2",
         scrub: 3
       },
 
