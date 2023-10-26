@@ -1,8 +1,12 @@
-$globe-width:   1vw;
-$globe-height:  1vw;
+$globe-width:   1.2vw;
+$globe-height:  1.2vw;
 $globe-spacing: .2vw;
-$globe-spread: 3px;
+$globe-spread: 0.2vw;
 $light-off-opacity: 0.4;
+
+
+
+
 
 .gluster {
     display: flex;
@@ -12,6 +16,14 @@ $light-off-opacity: 0.4;
     max-width: 100vw;
     height: 70vw;
 
+}
+
+
+.tent{
+
+    width: 100%;
+    max-width:70vw;
+    height: $globe-height;
 }
 
 .lightBulb{
@@ -44,8 +56,8 @@ $light-off-opacity: 0.4;
 }
 
 .green{
-    background: rgba(0,247,165,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,1);
+    background: rgb(29, 247, 0,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgb(29, 247, 0,0.5);
     animation-name: flash-1;
     animation-duration: 2s;
 }
@@ -63,12 +75,18 @@ $light-off-opacity: 0.4;
     animation-duration: 0.4s;
 }
 
+.yellow{
+    background: rgb(255, 238, 0);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(255, 238, 0, 0.5);
+    animation-name: flash-4;
+    animation-duration: 0.4s;
+}
 
 @keyframes flash-1 { 
-    0%, 100% { background: rgba(0,247,165,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,1);} 
-    50% { background: rgba(0,247,165,$light-off-opacity);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,0.2);}
+    0%, 100% { background: rgb(29, 247, 0,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgb(29, 247, 0,1);} 
+    50% { background: rgba(29, 247, 0,$light-off-opacity);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgb(29, 247, 0,0.2);}
 }
 @keyframes flash-2 { 
     0%, 100% { background: rgba(0,255,255,1);
@@ -81,4 +99,10 @@ $light-off-opacity: 0.4;
     box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);} 
     50% { background: rgba(247,0,148,$light-off-opacity);
     box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,0.2);}
+}
+@keyframes flash-4 { 
+    0%, 100% { background: rgba(255, 238, 0,1);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(255, 238, 0,1);} 
+    50% { background: rgba(255, 238, 0,$light-off-opacity);
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(255, 238, 0, 0.5);}
 }

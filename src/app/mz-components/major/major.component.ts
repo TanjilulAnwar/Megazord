@@ -19,13 +19,26 @@ export class MajorComponent implements OnInit {
   setupGsap(){
 
 
+   //middle string
     gsap.utils.toArray(".string1").forEach((star:any, i) => {
-
-
-     
-     gsap.set(star, { yPercent: 120, xPercent: -10000+(i*1500)});
+      var a=2
+      var b=48
+      var c=50
+      var x=-2350+(i*200)
+      var y = 90+(-(Math.pow(i,2))*a+(b*i)+c)// -ax^2+bx+c ; c adjust height
+     gsap.set(star, { yPercent:y, xPercent: x});
     });
 
+
+
+    gsap.utils.toArray(".string2").forEach((star:any, i) => {
+      var a=4.3
+      var b=100
+      var c=50
+      var x=-2350+(i*200)
+      var y = 90+(-(Math.pow(i,2))*a+(b*i)+c)// -ax^2+bx+c ; c adjust height
+     gsap.set(star, { yPercent:y, xPercent: x});
+    });
   }
 
 
