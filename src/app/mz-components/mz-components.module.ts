@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TestComponent } from './test/test.component';
-import { FooComponent } from './foo/foo.component';
-import { BarComponent } from './bar/bar.component';
-import { BannerComponent } from './banner/banner.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { DesignerComponent } from './designer/designer.component';
@@ -19,28 +15,23 @@ import { MzInputButtonComponent } from './mz-input-button/mz-input-button.compon
 import { MzInputPasswordComponent } from './mz-input-password/mz-input-password.component';
 
 const componentList =[
-  TestComponent,
-  FooComponent,
-  BarComponent,
-  BannerComponent,
+
   DesignerComponent,
   StructureComponent,
-  MzInputTextComponent
+  MzInputTextComponent,
+  MzInputEmailComponent,
+  MzInputDateComponent,
+  MzInputCheckComponent,
+  MzInputRadioComponent,
+  MzInputTextareaComponent,
+  MzInputSelectComponent,
+  MzInputButtonComponent,
+  MzInputPasswordComponent,
 ]
 
 @NgModule({
   declarations: [
     ...componentList,
-    MzInputEmailComponent,
-    MzInputDateComponent,
-    MzInputCheckComponent,
-    MzInputRadioComponent,
-    MzInputTextareaComponent,
-    MzInputSelectComponent,
-    MzInputButtonComponent,
-    MzInputPasswordComponent,
-
-    
   ],
   imports: [
     CommonModule,
