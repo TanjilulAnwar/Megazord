@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { DesignerComponent } from './designer/designer.component';
 import { StructureComponent } from './structure/structure.component';
@@ -35,7 +34,6 @@ const componentList =[
   ],
   imports: [
     CommonModule,
-    NgbCarouselModule,
     FormsModule
   ],
   exports:[
