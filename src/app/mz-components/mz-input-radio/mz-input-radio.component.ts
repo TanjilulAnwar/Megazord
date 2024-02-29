@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mz-input-radio',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mz-input-radio.component.scss']
 })
 export class MzInputRadioComponent {
-
+  @Input() caption:any
 }

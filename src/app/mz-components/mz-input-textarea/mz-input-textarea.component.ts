@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mz-input-textarea',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mz-input-textarea.component.scss']
 })
 export class MzInputTextareaComponent {
-
+  @Input() caption:any
 }

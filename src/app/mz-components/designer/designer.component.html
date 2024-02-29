@@ -1,1 +1,71 @@
-<div class="local-component">designer works!</div>
+<div class="local-component">
+
+<div>
+
+    <button type="button" class="btn btn-primary btn-sm" (click)="showfieldValue()"> Add Field</button>
+</div>
+
+    <div>
+        <label class="col-sm-2 col-form-label col-form-label-sm">Caption</label>
+        <div class="col-sm-4">
+          <input type="text"
+           [(ngModel)]="field.caption" 
+           class="form-control form-control-sm"
+           id="colFormLabelSm1"
+           placeholder="Text">
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <label class="col-sm-2 col-form-label col-form-label-sm">Type</label>
+            <div class="col-sm-4">
+        
+                <select class="form-select form-select-sm" id="exampleFormControlSelect1" name="selectAction" 
+                [(ngModel)]="field.type">
+                <option *ngFor="let type of typeList" [value]="type.id">
+                    {{type.name}}
+                  </option> 
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label class="col-sm-2 col-form-label col-form-label-sm">Parameter Name</label>
+        <div class="col-sm-4">
+          <input type="text"
+           [(ngModel)]="field.parameter" 
+           class="form-control form-control-sm"
+           id="colFormLabelSm2"
+           placeholder="Text">
+        </div>
+    </div>
+
+
+    <div>
+        <label class="col-sm-4 col-form-label col-form-label-sm">Drop Down Parameter</label>
+        <div class="col-sm-4">
+          <input type="text"
+           [(ngModel)]="field.dropDownParameter" 
+           class="form-control form-control-sm"
+           id="colFormLabelSm3"
+           placeholder="Text">
+        </div>
+    </div>
+
+
+    <div>
+        <label class="col-sm-2 col-form-label col-form-label-sm">template</label>
+        <div class="col-sm-4">
+          <input type="text"
+           [(ngModel)]="field.template" 
+           class="form-control form-control-sm"
+           id="colFormLabelSm4"
+           placeholder="Text">
+        </div>
+    </div>
+
+
+
+</div>

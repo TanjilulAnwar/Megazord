@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mz-input-password',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mz-input-password.component.scss']
 })
 export class MzInputPasswordComponent {
-
+  @Input() caption:any
 }

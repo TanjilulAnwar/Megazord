@@ -1,14 +1,17 @@
 <!-- https://getbootstrap.com/docs/5.0/forms/layout/ -->
-<div class="local-component">
-    <form >
-       <mz-input-text></mz-input-text>
-       <mz-input-email></mz-input-email>
-       <mz-input-password></mz-input-password>
-       <mz-input-date></mz-input-date>
-       <mz-input-textarea></mz-input-textarea>
-       <mz-input-radio></mz-input-radio>
-       <mz-input-select></mz-input-select>
-       <mz-input-check></mz-input-check>
-       <mz-input-button></mz-input-button>
-    </form>
+<div class="local-component" *ngIf="layout">
+   
+        <div [ngSwitch] = "layout.type">
+            <mz-input-text *ngSwitchCase = "'text'" [caption] = "layout.caption"></mz-input-text>
+            <mz-input-email *ngSwitchCase = "'email'" [caption] = "layout.caption"></mz-input-email>
+            <mz-input-password *ngSwitchCase = "'password'" [caption] = "layout.caption"></mz-input-password>
+            <mz-input-date *ngSwitchCase = "'date'" [caption] = "layout.caption"></mz-input-date>
+            <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "layout.caption"></mz-input-textarea>
+            <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "layout.caption"></mz-input-radio>
+            <mz-input-select *ngSwitchCase = "'select'" [caption] = "layout.caption"></mz-input-select>
+            <mz-input-check *ngSwitchCase = "'check'" [caption] = "layout.caption"></mz-input-check>
+            <mz-input-button *ngSwitchCase = "'button'" [caption] = "layout.caption"></mz-input-button>
+        </div>
+
+
 </div>

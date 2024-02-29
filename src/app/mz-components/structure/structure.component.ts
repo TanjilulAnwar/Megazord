@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-structure',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./structure.component.scss']
 })
 export class StructureComponent {
+@Input() layout:any
+
+
+
+
 
 }

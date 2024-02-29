@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DesignerComponent } from './designer/designer.component';
 import { StructureComponent } from './structure/structure.component';
@@ -33,6 +33,9 @@ const componentList =[
     ...componentList,
   ],
   imports: [
+    NgSwitch,
+    NgSwitchCase,
+    NgSwitchDefault,
     CommonModule,
     FormsModule
   ],

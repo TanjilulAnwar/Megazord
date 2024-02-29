@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mz-input-text',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./mz-input-text.component.scss']
 })
 export class MzInputTextComponent {
+ @Input() caption:any
 
 }

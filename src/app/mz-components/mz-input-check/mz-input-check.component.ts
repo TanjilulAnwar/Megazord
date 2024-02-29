@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mz-input-check',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mz-input-check.component.scss']
 })
 export class MzInputCheckComponent {
-
+  @Input() caption:any
 }

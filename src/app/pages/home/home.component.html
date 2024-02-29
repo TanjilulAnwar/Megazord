@@ -1,6 +1,6 @@
 <div class="local-center">
 
-    <app-structure style="width: 50%;"></app-structure>
-    <app-designer style="width: 50%;"></app-designer>
+    <app-structure style="width: 50%;" [layout] = "layout"></app-structure>
+    <app-designer style="width: 50%;" (layout)="onLayoutUpdate($event)"></app-designer>
 
 </div>
