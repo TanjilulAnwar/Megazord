@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class MzInputCheckComponent {
   @Input() caption:any
+
+  @Input() template:any
 }

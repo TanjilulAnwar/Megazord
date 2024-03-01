@@ -2,7 +2,8 @@
 <div class="local-component" *ngIf="layout">
    
         <div [ngSwitch] = "layout.type">
-            <mz-input-text *ngSwitchCase = "'text'" [caption] = "layout.caption"></mz-input-text>
+            <mz-input-text *ngSwitchCase = "'text'"  [caption] = "layout.caption"  [template] = "layout.template" >
+           </mz-input-text>
             <mz-input-email *ngSwitchCase = "'email'" [caption] = "layout.caption"></mz-input-email>
             <mz-input-password *ngSwitchCase = "'password'" [caption] = "layout.caption"></mz-input-password>
             <mz-input-date *ngSwitchCase = "'date'" [caption] = "layout.caption"></mz-input-date>

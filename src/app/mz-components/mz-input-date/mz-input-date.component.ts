@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class MzInputDateComponent {
   @Input() caption:any
+
+  @Input() template:any
 }

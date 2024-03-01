@@ -1,6 +1,6 @@
 <div>
-    <label class="col-sm-2 col-form-label col-form-label-sm">{{caption}}</label>
-    <div class="col-sm-4">
+    <label [ngClass]="template" class="col-form-label col-form-label-sm">{{caption}}</label>
+    <div [ngClass]="template">
       <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Text">
     </div>
 </div>

@@ -13,6 +13,7 @@ import { MzInputSelectComponent } from './mz-input-select/mz-input-select.compon
 import { MzInputButtonComponent } from './mz-input-button/mz-input-button.component';
 import { MzInputPasswordComponent } from './mz-input-password/mz-input-password.component';
 
+
 const componentList =[
 
   DesignerComponent,
@@ -30,7 +31,7 @@ const componentList =[
 
 @NgModule({
   declarations: [
-    ...componentList,
+    ...componentList
   ],
   imports: [
     NgSwitch,

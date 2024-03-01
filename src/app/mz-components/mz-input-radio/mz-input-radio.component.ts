@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class MzInputRadioComponent {
   @Input() caption:any
+
+  @Input() template:any
 }
