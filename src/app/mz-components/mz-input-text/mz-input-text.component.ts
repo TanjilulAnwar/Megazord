@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class MzInputTextComponent{
   @Input() caption:any
 
-  @Input() template:string = "col-sm-4"
+  @Input() template:string = "4"
 
+  col = "col-sm-"
 }

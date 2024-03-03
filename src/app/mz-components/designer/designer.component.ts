@@ -10,6 +10,7 @@ export class DesignerComponent {
 @Output() layout: EventEmitter<any> = new EventEmitter();
 field:any={};
 
+
 typeList=[
   {id:"text", name:"Text Input"},
   {id:"email", name:"Email Input"},
