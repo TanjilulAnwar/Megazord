@@ -8,8 +8,14 @@ import { Component, Input } from '@angular/core';
 export class StructureComponent {
 @Input() layout:any
 
+/**
+ *
+ */
+constructor() {
 
-
-
+ if(this.layout.type === 'select'){
+  
+ }
+}
 
 }

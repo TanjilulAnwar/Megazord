@@ -9,7 +9,7 @@
             <mz-input-date *ngSwitchCase = "'date'" [caption] = "layout.caption"></mz-input-date>
             <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "layout.caption"></mz-input-textarea>
             <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "layout.caption"></mz-input-radio>
-            <mz-input-select *ngSwitchCase = "'select'" [caption] = "layout.caption"></mz-input-select>
+            <mz-input-select *ngSwitchCase = "'select'" [caption] = "layout.caption" [dataList]="layout.dropDownParameter"></mz-input-select>
             <mz-input-check *ngSwitchCase = "'check'" [caption] = "layout.caption"></mz-input-check>
             <mz-input-button *ngSwitchCase = "'button'" [caption] = "layout.caption"></mz-input-button>
         </div>

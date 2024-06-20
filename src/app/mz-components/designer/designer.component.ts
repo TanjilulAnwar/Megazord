@@ -9,7 +9,7 @@ export class DesignerComponent {
 
 @Output() layout: EventEmitter<any> = new EventEmitter();
 field:any={};
-
+showDdlParam=false;
 
 typeList=[
   {id:"text", name:"Text Input"},
@@ -29,7 +29,17 @@ constructor() {
 this.field.type = this.typeList[0].id;
 }
 
+typeDdlChanged(event:any){
 
+console.log(event)
+if(event === 'select'){
+  this.showDdlParam = true;
+}
+else{
+  this.showDdlParam = false;
+}
+
+}
 
 
 showfieldValue(){

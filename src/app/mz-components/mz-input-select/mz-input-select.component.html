@@ -2,10 +2,8 @@
     <label class="col-sm-2 col-form-label col-form-label-sm">{{caption}}</label>
     <div class="col-sm-4">
 
-        <select class="form-select form-select-sm" id="exampleFormControlSelect1">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
+        <select class="form-select form-select-sm" id="exampleFormControlSelect1" (ngModelChange)="ddlValueChanged($event)">
+          <option *ngFor="let item of dataList" value="item.id">{{item.value}}</option>
         </select>
     </div>
 </div>
