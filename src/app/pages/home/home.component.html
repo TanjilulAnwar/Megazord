@@ -1,4 +1,6 @@
-<app-test></app-test>
-<app-banner></app-banner>
-<app-foo></app-foo>
-<app-bar></app-bar>
+<div class="local-center">
+
+    <app-structure style="width: 50%;" [layout] = "layout"></app-structure>
+    <app-designer style="width: 50%;" (layout)="onLayoutUpdate($event)"></app-designer>
+
+</div>
