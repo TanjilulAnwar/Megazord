@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-structure',
@@ -6,16 +6,55 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./structure.component.scss']
 })
 export class StructureComponent {
-@Input() layout:any
+//@Input() layout:any
 
+private _layout: any;
+    
+@Input() set layout(value: any) {
+   this._layout = value;
+   this.updateList();
+   console.log('ddl!')
+   console.log( this['somList'] )
+}
+
+get layout(): any {
+    return this._layout;
+}
+
+
+ddlList:any
+somList = [{id:1, value:'Audi'},
+{id:2, value:'BMW'},
+{id:3, value:'Mercedes'},
+{id:4, value:'Ulka'},
+{id:5, value:'Segoe'},
+{id:6, value:'Milan'},]
 /**
  *
  */
 constructor() {
 
- if(this.layout.type === 'select'){
-  
- }
+
 }
+
+ngOnChanges(changes: SimpleChanges) {
+        
+  this.updateList()
+  
+}
+
+updateList(){
+
+  if(this.layout){
+    if(this.layout.type === 'select'){
+      this.ddlList=   this['somList'] 
+     }
+  }
+ 
+}
+
+
+
+
 
 }
