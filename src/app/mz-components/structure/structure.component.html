@@ -4,14 +4,14 @@
         <div [ngSwitch] = "layout.type">
             <mz-input-text *ngSwitchCase = "'text'"  [caption] = "layout.caption"  [template] = "layout.template" >
            </mz-input-text>
-            <mz-input-email *ngSwitchCase = "'email'" [caption] = "layout.caption"></mz-input-email>
-            <mz-input-password *ngSwitchCase = "'password'" [caption] = "layout.caption"></mz-input-password>
-            <mz-input-date *ngSwitchCase = "'date'" [caption] = "layout.caption"></mz-input-date>
-            <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "layout.caption"></mz-input-textarea>
-            <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "layout.caption"></mz-input-radio>
-            <mz-input-select *ngSwitchCase = "'select'" [caption] = "layout.caption" [dataList]="ddlList"></mz-input-select>
-            <mz-input-check *ngSwitchCase = "'check'" [caption] = "layout.caption"></mz-input-check>
-            <mz-input-button *ngSwitchCase = "'button'" [caption] = "layout.caption"></mz-input-button>
+            <mz-input-email *ngSwitchCase = "'email'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-email>
+            <mz-input-password *ngSwitchCase = "'password'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-password>
+            <mz-input-date *ngSwitchCase = "'date'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-date>
+            <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-textarea>
+            <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-radio>
+            <mz-input-select *ngSwitchCase = "'select'" [caption] = "layout.caption" [dataList]="ddlList" [template] = "layout.template" ></mz-input-select>
+            <mz-input-check *ngSwitchCase = "'check'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-check>
+            <mz-input-button *ngSwitchCase = "'button'" [caption] = "layout.caption" [template] = "layout.template" ></mz-input-button>
         </div>
 
 

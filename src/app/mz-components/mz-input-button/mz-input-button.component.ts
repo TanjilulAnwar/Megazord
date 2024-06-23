@@ -6,7 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./mz-input-button.component.scss']
 })
 export class MzInputButtonComponent {
-  @Input() caption:any
+  @Input() caption:any 
 
-  @Input() template:any
+  @Input() template:string = "4"
+  
+  col = "col-sm-"
+
 }

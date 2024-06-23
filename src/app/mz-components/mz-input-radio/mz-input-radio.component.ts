@@ -8,5 +8,9 @@ import { Component, Input } from '@angular/core';
 export class MzInputRadioComponent {
   @Input() caption:any
 
-  @Input() template:any
+  @Input() template:string = "4"
+  
+  col = "col-sm-"
+
+
 }

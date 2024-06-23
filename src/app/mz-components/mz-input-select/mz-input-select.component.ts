@@ -7,8 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class MzInputSelectComponent {
   @Input() caption:any
+ 
+  @Input() template:string = "4"
+  
+  col = "col-sm-"
 
-  @Input() template:any
 
   @Input() dataList:any
 

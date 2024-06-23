@@ -9,6 +9,7 @@ export class DesignerComponent {
 
 @Output() layout: EventEmitter<any> = new EventEmitter();
 field:any={};
+form:[]=[]
 showDdlParam=false;
 
 typeList=[
