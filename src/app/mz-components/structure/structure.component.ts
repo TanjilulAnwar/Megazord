@@ -12,7 +12,7 @@ private _layout: any;
     
 @Input() set layout(value: any) {
    this._layout = value;
-   this.updateList();
+//   this.updateList();
   // console.log('ddl!')
  //  console.log( this['somList'] )
 }
@@ -41,7 +41,7 @@ constructor() {
 
 ngOnChanges(changes: SimpleChanges) {
         
-  this.updateList()
+ // this.updateList()
   
 }
 
@@ -50,7 +50,7 @@ ngOnChanges(changes: SimpleChanges) {
 ngDoCheck() {
         
   console.log("change detected!");
-  this.updateList()
+ // this.updateList()
   
 }
 
