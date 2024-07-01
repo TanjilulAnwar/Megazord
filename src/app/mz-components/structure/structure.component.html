@@ -1,18 +1,20 @@
 <!-- https://getbootstrap.com/docs/5.0/forms/field/ -->
-<div class="local-component parent" >
+<div class="local-component parent" *ngFor="let group of layout.groups" class ="col-sm-{{group.template}}">
+<div class="local-component parent" *ngFor="let row of group.rows" class ="col-sm-{{row.template}}" >
    
-        <div *ngFor="let field of layout" [ngSwitch] = "field.type" class ="col-sm-{{field.template}}" class="child" >
-            <mz-input-text *ngSwitchCase = "'text'"  [caption] = "field.caption"  [template] = "'12'" >
+        <div *ngFor="let field of row.fields" [ngSwitch] = "field.type" class ="col-sm-{{field.template}}" class="child" >
+            <mz-input-text *ngSwitchCase = "'text'"  [caption] = "field.caption"  [template] = "'12'"  class="child" >
            </mz-input-text>
-            <mz-input-email *ngSwitchCase = "'email'" [caption] = "field.caption" [template] = "'12'" ></mz-input-email>
-            <mz-input-password *ngSwitchCase = "'password'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-password>
-            <mz-input-date *ngSwitchCase = "'date'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-date>
-            <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-textarea>
-            <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-radio>
-            <mz-input-select *ngSwitchCase = "'select'" [caption] = "field.caption" [dataList]="ddlList" [template] = "'12'"  ></mz-input-select>
-            <mz-input-check *ngSwitchCase = "'check'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-check>
-            <mz-input-button *ngSwitchCase = "'button'" [caption] = "field.caption" [template] = "'12'" ></mz-input-button>
+            <mz-input-email *ngSwitchCase = "'email'" [caption] = "field.caption" [template] = "'12'"  class="child" ></mz-input-email>
+            <mz-input-password *ngSwitchCase = "'password'" [caption] = "field.caption" [template] = "'12'" class="child" ></mz-input-password>
+            <mz-input-date *ngSwitchCase = "'date'" [caption] = "field.caption" [template] = "'12'" class="child" ></mz-input-date>
+            <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "field.caption" [template] = "'12'" class="child" ></mz-input-textarea>
+            <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "field.caption" [template] = "'12'" class="child" ></mz-input-radio>
+            <mz-input-select *ngSwitchCase = "'select'" [caption] = "field.caption" [dataList]="ddlList" [template] = "'12'" class="child" ></mz-input-select>
+            <mz-input-check *ngSwitchCase = "'check'" [caption] = "field.caption" [template] = "'12'" class="child" ></mz-input-check>
+            <mz-input-button *ngSwitchCase = "'button'" [caption] = "field.caption" [template] = "'12'" class="child" ></mz-input-button>
         </div>
 
 
+</div>
 </div>

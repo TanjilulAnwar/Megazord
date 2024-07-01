@@ -1,11 +1,4 @@
-.grid {
-   // width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  //  grid-template-rows: repeat(auto-fill, 120px);
-   // grid-row-gap: .5em;
-  //  grid-column-gap: 1em;
-  }
+
   .parent {
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +6,6 @@
     
     .child {
     //flex: 1 0 auto; /* This will allow the child to grow and shrink as needed, with a basis of auto */
-    margin: 5px; /* Adjust the margin as needed */
+    padding: 5px; /* Adjust the margin as needed */
     }
     
