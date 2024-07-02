@@ -1,21 +1,21 @@
-
+<div class="local-component container-border" >
 <div>
-    <button type="button" class="btn btn-primary btn-sm" (click)="addGroup()"> Add Group</button>
+    <button type="button" class="btn-designer" (click)="addGroup()"><i class="bi bi-plus"></i>  Group</button>
 </div>
-<div class="local-component" *ngFor="let group of form.groups">
+<div class="local-component group-border" *ngFor="let group of form.groups">
 <div>
-    <button type="button" class="btn btn-primary btn-sm" (click)="addRow(group)"> Add Row</button>
+    <button type="button" class="btn-designer" (click)="addRow(group)"> <i class="bi bi-plus"></i> Row</button>
 </div>
 
-<div class="local-component" *ngFor="let row of group.rows">
+<div class="local-component row-border" *ngFor="let row of group.rows">
     <div>
-        <button type="button" class="btn btn-primary btn-sm" (click)="addField(row)"> Add Field</button>
+        <button type="button" class="btn-designer" (click)="addField(row)"><i class="bi bi-plus"></i> Field</button>
     </div>
 
     <div class="local-component scroll">
 
 
-        <div class="small-component" *ngFor="let field of row.fields">
+        <div class="small-component field-border" *ngFor="let field of row.fields">
             <div *ngIf="field.collapsed">
                 <div class="d-flex justify-content-between">
                     <div> <label class="col-sm-2 col-form-label col-form-label-sm">{{field.caption}}</label></div>
@@ -130,4 +130,6 @@
     </div>
 
 </div>
+</div>
+
 </div>
