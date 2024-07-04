@@ -14,7 +14,7 @@ export class DesignerComponent {
   // group: any = {};
   // rows: any[] = [];
   // groups: any[] = [];
-  form : any ={} 
+  form: any = {}
   showDdlParam = false;
   collapsed = true
   typeList = [
@@ -56,14 +56,29 @@ export class DesignerComponent {
   }
 
 
-  remove(field: any) {
-  //  this.utility.removeFromArrayByAttr(this.rows, 'id', field.id)
+  removeItemFromArray(array: [], item: any) {
+    this.utility.removeFromArrayByAttr(array, 'id', item.id)
 
   }
+  groupBorderSet(group: any, side: any) {
+     group.border[side]= !group.border[side]
+     var styleItem = `border-${side}: solid;`
+
+//     border-top: solid;
+//     border-color: #1c1c08;
+//     border-width: 1px;
+
+     if(group.border[side] === true){
+      group.style += styleItem
+
+     }
+     else{
+    group.style= group.style.replace(styleItem, '') ;
+     }
+ 
 
 
-
-
+  }
 
 
   addGroup() {
@@ -71,10 +86,21 @@ export class DesignerComponent {
     var group: any = {};
 
     group.id = this.utility.uuidv4();
-    group.caption = 'Caption'
+    group.caption = ''
     group.template = '12'
     group.collapsed = true
+    group.style = ''
+
+
+    group.border = {}
+    group.border.top = false
+    group.border.bottom = false
+    group.border.left = false
+    group.border.right = false
+    group.border.color = '#fff'
+    group.border.width = 0
     group.rows = []
+
     this.form.groups.push(group);
 
     // var jsonString =  JSON.stringify(this.field)
@@ -91,7 +117,7 @@ export class DesignerComponent {
 
 
 
-  addRow(group:any) {
+  addRow(group: any) {
 
     var row: any = {};
 
@@ -118,7 +144,7 @@ export class DesignerComponent {
 
 
 
-  addField(row:any) {
+  addField(row: any) {
 
     var field: any = {};
 
@@ -127,23 +153,20 @@ export class DesignerComponent {
     field.caption = 'Caption'
     field.template = '3'
     field.collapsed = true
-   // var row = this.groups.rows.find(x=>x.id === row.id)
+    // var row = this.groups.rows.find(x=>x.id === row.id)
     row.fields.push(field);
 
     // var jsonString =  JSON.stringify(this.field)
     // var obj =  JSON.parse(jsonString)
-
-
     // console.log("field",this.field);
     // console.log("jsonString",jsonString);
     // console.log("object",obj);
 
-
-this.emitChanges()
+    this.emitChanges()
   }
 
 
-  emitChanges(){
+  emitChanges() {
     this.layout.emit(this.form)
   }
 

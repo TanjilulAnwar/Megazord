@@ -1,4 +1,5 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-structure',
@@ -34,7 +35,7 @@ somList = [{id:1, value:'Audi'},
  */
 
 
-constructor() {
+constructor(private doms : DomSanitizer) {
 
 
 }
@@ -52,6 +53,11 @@ ngDoCheck() {
   console.log("change detected!");
  // this.updateList()
   
+}
+
+
+safeCss(group:any) {
+  return this.doms.bypassSecurityTrustStyle(group.style);
 }
 
 updateList(){

@@ -1,12 +1,10 @@
 
-  .parent {
+  .form-wrapper {
     display: flex;
     flex-wrap: wrap;
     }
     
-    .child {
-    //flex: 1 0 auto; /* This will allow the child to grow and shrink as needed, with a basis of auto */
-    //padding:0px 5px 0px 5px; 
-    }
-    
 
+    .group-border{
+      border: 1px solid #8a8a8a;
+    }

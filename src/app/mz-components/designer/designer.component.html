@@ -1,13 +1,56 @@
+<!-- <pre>{{form|json}}</pre> -->
+
 <div class="local-component container-border" >
 <div>
     <button type="button" class="btn-designer" (click)="addGroup()"><i class="bi bi-plus"></i>  Group</button>
 </div>
 <div class="local-component group-border" *ngFor="let group of form.groups">
+    <div class="mini-label">
+        Group
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>
+            <label class="col-sm-2 col-form-label col-form-label-sm">Caption</label>
+            <div class="col-sm-12">
+                <input type="text" [(ngModel)]="group.caption" class="form-control form-control-sm"
+                    id="colFormLabelSm1" placeholder="Text">
+            </div>
+
+
+        </div>
+     
+        <div (click)="removeItemFromArray(form.groups,group)" class="point align-content-center"><i class="bi bi-trash" style="color: brown;"></i></div>
+    </div>
+    <div class="d-flex">
+        <div (click)="groupBorderSet(group,'left')" class="point border-design" [ngClass]="group.border.left?'border-design-selected':''"> <i class="bi bi-border-left"></i> </div>
+        <div (click)="groupBorderSet(group,'right')" class="point border-design" [ngClass]="group.border.right?'border-design-selected':''"> <i class="bi bi-border-right"></i> </div>
+        <div (click)="groupBorderSet(group,'top')" class="point border-design" [ngClass]="group.border.top?'border-design-selected':''"> <i class="bi bi-border-top"></i> </div>
+        <div (click)="groupBorderSet(group,'bottom')" class="point border-design" [ngClass]="group.border.bottom?'border-design-selected':''"> <i class="bi bi-border-bottom"></i> </div>
+        <div  class="point border-design" ><input type="color" [(ngModel)]="group.border.color" id="colFormLabelSm21" placeholder="Text"></div>
+        <div  class="border-design" ><input type="number" class="form-control form-control-sm" [(ngModel)]="group.border.width" id="colFormLabelSm21" placeholder="1"></div>
+    </div>
+    <div>
+        <label class="col-sm-2 col-form-label col-form-label-sm">Size: {{group.template}}</label>
+        <div class="col-sm-8">
+            <input type="range" [(ngModel)]="group.template" class="form-range" min="1" max="12" step="1"
+                id="customRange31">
+
+        </div>
+
+
+    </div>
 <div>
     <button type="button" class="btn-designer" (click)="addRow(group)"> <i class="bi bi-plus"></i> Row</button>
 </div>
 
 <div class="local-component row-border" *ngFor="let row of group.rows">
+    <div class="mini-label">
+        Row
+    </div>
+    <div>
+      
+        <div (click)="removeItemFromArray(group.rows,row)" class="point"><i class="bi bi-trash" style="color: brown;"></i></div>
+    </div>
     <div>
         <button type="button" class="btn-designer" (click)="addField(row)"><i class="bi bi-plus"></i> Field</button>
     </div>
@@ -16,42 +59,21 @@
 
 
         <div class="small-component field-border" *ngFor="let field of row.fields">
+
             <div *ngIf="field.collapsed">
                 <div class="d-flex justify-content-between">
                     <div> <label class="col-sm-2 col-form-label col-form-label-sm">{{field.caption}}</label></div>
-
-                    <div (click)="collapse(field)" class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-pencil-square" viewBox="0 0 16 16">
-                            <path
-                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                            <path fill-rule="evenodd"
-                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                        </svg>
-                    </div>
+                    <div (click)="collapse(field)" class="point"> <i class="bi bi-pencil-square"></i> </div>
                 </div>
 
             </div>
 
             <div *ngIf="!field.collapsed" style="position: relative;">
-                <div style="position: absolute; right:0px" (click)="collapse(field)" class="point">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-box-arrow-up" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z" />
-                        <path fill-rule="evenodd"
-                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708z" />
-                    </svg>
+                <div class="mini-label">
+                    Field
                 </div>
-                <div style="position: absolute; right:0px ;bottom: 0px;" (click)="remove(field)" class="point">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="brown" class="bi bi-trash"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
-                        <path
-                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
-                    </svg>
-                </div>
+                <div style="position: absolute; right:0px" (click)="collapse(field)" class="point"><i class="bi bi-box-arrow-up"></i></div>
+                <div style="position: absolute; right:0px ;bottom: 0px;" (click)="removeItemFromArray(row.fields,field)" class="point"><i class="bi bi-trash" style="color: brown;"></i></div>
 
 
 
@@ -102,7 +124,7 @@
                     <!-- <label class="col-sm-2 col-form-label col-form-label-sm">template</label>
             <div class="col-sm-8">
               <input type="text"
-               [(ngModel)]="field.template" 
+               [(ngModel)]="field.template"
                class="form-control form-control-sm"
                id="colFormLabelSm4"
                placeholder="Text">
