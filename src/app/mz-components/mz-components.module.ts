@@ -12,6 +12,7 @@ import { MzInputTextareaComponent } from './mz-input-textarea/mz-input-textarea.
 import { MzInputSelectComponent } from './mz-input-select/mz-input-select.component';
 import { MzInputButtonComponent } from './mz-input-button/mz-input-button.component';
 import { MzInputPasswordComponent } from './mz-input-password/mz-input-password.component';
+import { MzTableComponent } from './mz-table/mz-table.component';
 
 
 const componentList =[
@@ -27,6 +28,7 @@ const componentList =[
   MzInputSelectComponent,
   MzInputButtonComponent,
   MzInputPasswordComponent,
+  MzTableComponent
 ]
 
 @NgModule({

@@ -26,8 +26,8 @@
         <div (click)="groupBorderSet(group,'right')" class="point border-design" [ngClass]="group.border.right?'border-design-selected':''"> <i class="bi bi-border-right"></i> </div>
         <div (click)="groupBorderSet(group,'top')" class="point border-design" [ngClass]="group.border.top?'border-design-selected':''"> <i class="bi bi-border-top"></i> </div>
         <div (click)="groupBorderSet(group,'bottom')" class="point border-design" [ngClass]="group.border.bottom?'border-design-selected':''"> <i class="bi bi-border-bottom"></i> </div>
-        <div  class="point border-design" ><input type="color" [(ngModel)]="group.border.color" id="colFormLabelSm21" placeholder="Text"></div>
-        <div  class="border-design" ><input type="number" class="form-control form-control-sm" [(ngModel)]="group.border.width" id="colFormLabelSm21" placeholder="1"></div>
+        <div  class="point border-design" ><input type="color" [(ngModel)]="group.border.color" (ngModelChange)="groupBorderSet(group)"  id="colFormLabelSm21" placeholder="Text"></div>
+        <div  class="border-design col-sm-2" ><input type="number" class="form-control form-control-sm" [(ngModel)]="group.border.width" (ngModelChange)="groupBorderSet(group)"  id="colFormLabelSm21" placeholder="1"></div>
     </div>
     <div>
         <label class="col-sm-2 col-form-label col-form-label-sm">Size: {{group.template}}</label>
@@ -54,7 +54,9 @@
     <div>
         <button type="button" class="btn-designer" (click)="addField(row)"><i class="bi bi-plus"></i> Field</button>
     </div>
-
+    <!-- <div>
+        <button type="button" class="btn-designer" (click)="addTable(row)"><i class="bi bi-plus"></i> Table</button>
+    </div> -->
     <div class="local-component scroll">
 
 
@@ -112,14 +114,20 @@
 
 
                 <div *ngIf="showDdlParam">
-                    <label class="col-sm-4 col-form-label col-form-label-sm">Drop Down List Parameter</label>
+                    <label class="col-sm-8 col-form-label col-form-label-sm">Drop Down List Parameter</label>
                     <div class="col-sm-8">
                         <input type="text" [(ngModel)]="field.dropDownParameter" class="form-control form-control-sm"
                             id="colFormLabelSm3" placeholder="Text">
                     </div>
                 </div>
 
-
+                <div *ngIf="showTableParam">
+                    <label class="col-sm-8 col-form-label col-form-label-sm">Table List Parameter</label>
+                    <div class="col-sm-8">
+                        <input type="text" [(ngModel)]="field.tableParameter" class="form-control form-control-sm"
+                            id="colFormLabelSm4" placeholder="Text">
+                    </div>
+                </div>
                 <div>
                     <!-- <label class="col-sm-2 col-form-label col-form-label-sm">template</label>
             <div class="col-sm-8">

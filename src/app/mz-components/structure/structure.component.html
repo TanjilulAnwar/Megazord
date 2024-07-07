@@ -1,11 +1,8 @@
 <!-- https://getbootstrap.com/docs/5.0/forms/field/ -->
  <div class="form-wrapper ">
-    <div class="form-component" *ngFor="let group of layout.groups"
+    <div class="form-component" *ngFor="let group of layout?.groups"
      class ="col-sm-{{group.template}}"
-      [style]="safeCss(group)" 
-      [style.border-color]="group.border.color"
-      [style.border-width]="group.border.width +'px'"
-      >
+      [style]="safeCss(group)">
         <div >{{group.caption}}</div>
         <div class="local-component form-wrapper" *ngFor="let row of group.rows" class ="col-sm-{{row.template}}" >
            
@@ -19,10 +16,12 @@
                     <mz-input-select *ngSwitchCase = "'select'" [caption] = "field.caption" [dataList]="ddlList" [template] = "'12'" ></mz-input-select>
                     <mz-input-check *ngSwitchCase = "'check'" [caption] = "field.caption" [template] = "'12'" ></mz-input-check>
                     <mz-input-button *ngSwitchCase = "'button'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-button>
+                    <mz-table *ngSwitchCase = "'table'"  ></mz-table>
                 </div>
-        
+           
         
         </div>
         </div>
 
  </div>
+<!-- [caption] = "field.caption"  [template] = "'12'"  -->

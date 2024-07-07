@@ -16,7 +16,9 @@ export class DesignerComponent {
   // groups: any[] = [];
   form: any = {}
   showDdlParam = false;
-  collapsed = true
+  showTableParam = false;
+  collapsed = true;
+  sides =['top', 'bottom', 'left', 'right']
   typeList = [
     { id: "text", name: "Text Input" },
     { id: "email", name: "Email Input" },
@@ -27,6 +29,7 @@ export class DesignerComponent {
     { id: "textarea", name: "Text Area Input" },
     { id: "button", name: "Button" },
     { id: "select", name: "Dropdown" },
+    { id: "table", name: "Table" },
 
   ]
 
@@ -42,9 +45,15 @@ export class DesignerComponent {
     if (event === 'select') {
       this.showDdlParam = true;
     }
+    if (event === 'table') {
+      this.showTableParam = true;
+    }
     else {
       this.showDdlParam = false;
+      this.showTableParam = false;
     }
+
+
 
   }
 
@@ -60,25 +69,22 @@ export class DesignerComponent {
     this.utility.removeFromArrayByAttr(array, 'id', item.id)
 
   }
-  groupBorderSet(group: any, side: any) {
-     group.border[side]= !group.border[side]
-     var styleItem = `border-${side}: solid;`
-
-//     border-top: solid;
-//     border-color: #1c1c08;
-//     border-width: 1px;
-
-     if(group.border[side] === true){
-      group.style += styleItem
-
-     }
-     else{
-    group.style= group.style.replace(styleItem, '') ;
-     }
- 
 
 
+  groupBorderSet(group: any, side?: any) {
+
+    if(side){
+        group.border[side]= !group.border[side]
+    }
+
+    group.style = ''
+
+    this.sides.forEach(side=>{
+    group.style+= group.border[side]? `border-${side}:${group.border.width}px solid ${group.border.color};`:''
+    })
   }
+
+
 
 
   addGroup() {
@@ -97,7 +103,7 @@ export class DesignerComponent {
     group.border.bottom = false
     group.border.left = false
     group.border.right = false
-    group.border.color = '#fff'
+    group.border.color = '#000'
     group.border.width = 0
     group.rows = []
 
@@ -126,7 +132,7 @@ export class DesignerComponent {
     row.template = '12'
     row.collapsed = true
     row.fields = []
-
+    row.tables = []
     //var group = this.groups.find(x=>x.id === group.id)
     group.rows.push(row);
 
@@ -165,6 +171,26 @@ export class DesignerComponent {
     this.emitChanges()
   }
 
+
+  addTable(row: any){
+    var table: any = {};
+    table.id = this.utility.uuidv4();
+    table.type = this.typeList[0].id;
+    table.caption = 'Caption'
+    table.columns = []
+    table.template = '12'
+    table.collapsed = true
+    // var row = this.groups.rows.find(x=>x.id === row.id)
+    row.tables.push(table);
+
+    // var jsonString =  JSON.stringify(this.field)
+    // var obj =  JSON.parse(jsonString)
+    // console.log("field",this.field);
+    // console.log("jsonString",jsonString);
+    // console.log("object",obj);
+
+    this.emitChanges()
+  }
 
   emitChanges() {
     this.layout.emit(this.form)

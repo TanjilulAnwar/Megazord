@@ -1,0 +1,16 @@
+<div class="table-responsive table-style">
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th *ngFor="let col of filteredColumns">{{col.caption}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of data">
+                <td *ngFor="let colName of dataColumns" >{{ row[colName]}}</td>
+            </tr>
+        </tbody>
+ 
+    </table>
+  </div>
+  
