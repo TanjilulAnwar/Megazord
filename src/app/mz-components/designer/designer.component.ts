@@ -39,21 +39,12 @@ export class DesignerComponent {
 
   }
 
-  typeDdlChanged(event: any) {
+  typeDdlChanged(event: any, field:any) {
 
-    console.log(event)
-    if (event === 'select') {
-      this.showDdlParam = true;
-    }
-    if (event === 'table') {
-      this.showTableParam = true;
-    }
-    else {
-      this.showDdlParam = false;
-      this.showTableParam = false;
-    }
+    //console.log(event)
 
-
+    field.showDdlParam = event === 'select';
+    field.showTableParam = event === 'table';
 
   }
 
@@ -159,13 +150,14 @@ export class DesignerComponent {
     field.caption = 'Caption'
     field.template = '3'
     field.collapsed = true
-    // var row = this.groups.rows.find(x=>x.id === row.id)
+    field.showDdlParam = field.type === 'select';
+    field.showTableParam = field.type === 'table';
     row.fields.push(field);
 
     // var jsonString =  JSON.stringify(this.field)
     // var obj =  JSON.parse(jsonString)
     // console.log("field",this.field);
-    // console.log("jsonString",jsonString);
+    // console.log("jsonString",jsonString); 
     // console.log("object",obj);
 
     this.emitChanges()

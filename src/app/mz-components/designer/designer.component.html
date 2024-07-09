@@ -95,7 +95,7 @@
                         <div class="col-sm-8">
 
                             <select class="form-select form-select-sm" id="exampleFormControlSelect1"
-                                name="selectAction" [(ngModel)]="field.type" (ngModelChange)="typeDdlChanged($event)">
+                                name="selectAction" [(ngModel)]="field.type" (ngModelChange)="typeDdlChanged($event, field)">
                                 <option *ngFor="let type of typeList" [value]="type.id">
                                     {{type.name}}
                                 </option>
@@ -113,7 +113,7 @@
                 </div>
 
 
-                <div *ngIf="showDdlParam">
+                <div *ngIf="field.showDdlParam">
                     <label class="col-sm-8 col-form-label col-form-label-sm">Drop Down List Parameter</label>
                     <div class="col-sm-8">
                         <input type="text" [(ngModel)]="field.dropDownParameter" class="form-control form-control-sm"
@@ -121,7 +121,7 @@
                     </div>
                 </div>
 
-                <div *ngIf="showTableParam">
+                <div *ngIf="field.showTableParam">
                     <label class="col-sm-8 col-form-label col-form-label-sm">Table List Parameter</label>
                     <div class="col-sm-8">
                         <input type="text" [(ngModel)]="field.tableParameter" class="form-control form-control-sm"

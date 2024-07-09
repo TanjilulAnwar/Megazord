@@ -1,5 +1,4 @@
-<!-- https://getbootstrap.com/docs/5.0/forms/field/ -->
- <div class="form-wrapper ">
+ <div class="form-wrapper">
     <div class="form-component" *ngFor="let group of layout?.groups"
      class ="col-sm-{{group.template}}"
       [style]="safeCss(group)">
@@ -13,10 +12,10 @@
                     <mz-input-date *ngSwitchCase = "'date'" [caption] = "field.caption" [template] = "'12'" ></mz-input-date>
                     <mz-input-textarea *ngSwitchCase = "'textarea'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-textarea>
                     <mz-input-radio *ngSwitchCase = "'radio'" [caption] = "field.caption" [template] = "'12'" ></mz-input-radio>
-                    <mz-input-select *ngSwitchCase = "'select'" [caption] = "field.caption" [dataList]="ddlList" [template] = "'12'" ></mz-input-select>
+                    <mz-input-select *ngSwitchCase = "'select'" [caption] = "field.caption" [dataList]="dataList[field.dropDownParameter]" [template] = "'12'" ></mz-input-select>
                     <mz-input-check *ngSwitchCase = "'check'" [caption] = "field.caption" [template] = "'12'" ></mz-input-check>
                     <mz-input-button *ngSwitchCase = "'button'" [caption] = "field.caption" [template] = "'12'"  ></mz-input-button>
-                    <mz-table *ngSwitchCase = "'table'"  ></mz-table>
+                    <mz-table *ngSwitchCase = "'table'" [dataList]="dataList[field.tableParameter]" ></mz-table>
                 </div>
            
         
@@ -24,4 +23,3 @@
         </div>
 
  </div>
-<!-- [caption] = "field.caption"  [template] = "'12'"  -->
