@@ -3,8 +3,9 @@
 <img src="https://github.com/TanjilulAnwar/megazord/blob/master/Megazord.webp" alt="drawing" width="200"/>
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6
 Node version 20.11.1
+Bootstrap 5.3.3
 
 ## Development server
 
