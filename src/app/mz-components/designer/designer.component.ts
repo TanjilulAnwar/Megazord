@@ -146,7 +146,7 @@ export class DesignerComponent {
   }
 
 
-
+//test
   addField(row: any) {
 
     var field: any = {};
