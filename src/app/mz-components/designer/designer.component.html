@@ -1,5 +1,15 @@
 <!-- <pre>{{form|json}}</pre> -->
-
+<div class="local-component container-border" style="display: flex;" >
+    <div>
+        <button type="button" class="btn-designer" (click)="undoChanges()" data-bs-toggle="tooltip" data-bs-placement="top" title="Undo Change"><i class="bi bi-arrow-counterclockwise"></i></button>
+    </div>
+    <div>
+        <button type="button" class="btn-designer" (click)="redoChanges()" data-bs-toggle="tooltip" data-bs-placement="top" title="Redo Change"><i class="bi bi-arrow-clockwise"></i></button>
+    </div>
+    <div>
+        <button type="button" class="btn-designer" (click)="saveChanges()" data-bs-toggle="tooltip" data-bs-placement="top" title="Save Changes"><i class="bi bi-floppy"></i></button>
+    </div>
+</div>
 <div class="local-component container-border" >
 <div>
     <button type="button" class="btn-designer" (click)="addGroup()"><i class="bi bi-plus"></i>  Group</button>
@@ -64,7 +74,7 @@
 
             <div *ngIf="field.collapsed">
                 <div class="d-flex justify-content-between">
-                    <div> <label class="col-sm-2 col-form-label col-form-label-sm">{{field.caption}}</label></div>
+                    <div> <label class="col-sm-2 col-form-label col-form-label-sm">{{field.caption?field.caption:'caption'}}</label></div>
                     <div (click)="collapse(field)" class="point"> <i class="bi bi-pencil-square"></i> </div>
                 </div>
 

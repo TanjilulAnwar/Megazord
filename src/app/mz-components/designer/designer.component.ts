@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, SimpleChanges } from '@angular/core';
 import { UtilityService } from 'src/app/mz-services/utility.service';
 
 @Component({
@@ -14,6 +14,8 @@ export class DesignerComponent {
   // group: any = {};
   // rows: any[] = [];
   // groups: any[] = [];
+  undoStack:any [] =[]
+  redoStack:any [] =[]
   form: any = {}
   showDdlParam = false;
   showTableParam = false;
@@ -35,8 +37,12 @@ export class DesignerComponent {
 
   constructor(private utility: UtilityService) {
 
-    this.form.groups = []
+    this.initForm();
+  }
 
+
+  initForm(){
+    this.form.groups = []
   }
 
   typeDdlChanged(event: any, field:any) {
@@ -147,7 +153,7 @@ export class DesignerComponent {
 
     field.id = this.utility.uuidv4();
     field.type = this.typeList[0].id;
-    field.caption = 'Caption'
+    field.caption = null
     field.template = '3'
     field.collapsed = true
     field.showDdlParam = field.type === 'select';
@@ -184,8 +190,81 @@ export class DesignerComponent {
     this.emitChanges()
   }
 
+writeChangeLog(){
+  // console.log('form',this.form)
+  // console.log('undo',this.undoStack)
+  // console.log('redo',this.redoStack)
+}
+
+
+
+
+ngDoCheck() {
+
+ if( JSON.stringify(this.undoStack[this.undoStack.length - 1] ) == JSON.stringify(this.form)){
+  console.log('no change')
+ }
+ else{
+  this.undoStack.push(this.propy(this.form))
+  console.log('yes change')
+ }
+
+  this.writeChangeLog()
+}
+
+
+
+propy(obj: any){
+return JSON.parse(JSON.stringify(obj))
+}
   emitChanges() {
+    this.undoStack.push(this.propy(this.form))
     this.layout.emit(this.form)
+    this.writeChangeLog();
   }
 
+
+  undoChanges(){
+    if(this.undoStack.length >0){
+    this.redoStack.push(this.propy(this.undoStack[this.undoStack.length - 1]));
+    
+    this.undoStack.pop();
+
+    if(this.undoStack.length >0){
+      var item = this.propy(this.undoStack[this.undoStack.length - 1])
+      this.form = item;
+    }
+    else{
+      this.initForm()
+    }
+    this.layout.emit(this.form)
+  
+    }
+    this.writeChangeLog();
+  }
+
+
+  redoChanges(){
+    if(this.redoStack.length >0){
+      this.undoStack.push(this.propy(this.redoStack[this.redoStack.length - 1]));
+      
+      this.redoStack.pop();
+  
+      if(this.undoStack.length >0){
+       var item = this.propy(this.undoStack[this.undoStack.length - 1])
+       this.form = item;
+      }
+      else{
+        this.initForm()
+      }
+      this.layout.emit(this.form)
+    
+      }
+      this.writeChangeLog();
+  }
+
+
+  saveChanges(){
+    
+  }
 }

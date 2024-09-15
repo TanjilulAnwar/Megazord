@@ -1,5 +1,5 @@
 <div class="component-parent">
-    <label class="{{col}}{{template}}" class="col-form-label col-form-label-sm">{{caption}}</label>
+    <label class="{{col}}{{template}}" class="col-form-label col-form-label-sm">{{caption?caption:'caption'}}</label>
     <div class="{{col}}{{template}}">
         <select class="form-select form-select-sm" id="exampleFormControlSelect1" (ngModelChange)="ddlValueChanged($event)">
           <option *ngFor="let item of dataList" value="item.id">{{item.value}}</option>

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-structure',
   templateUrl: './structure.component.html',
@@ -108,7 +109,7 @@ export class StructureComponent implements OnInit {
 
 
   ngDoCheck() {
-    console.log("change detected!");
+    console.log("structure change detected!");
   }
 
   safeCss(group: any) {
