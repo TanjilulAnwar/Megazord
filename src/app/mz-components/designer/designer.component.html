@@ -9,14 +9,37 @@
     <div>
         <button type="button" class="btn-designer" (click)="saveChanges()" data-bs-toggle="tooltip" data-bs-placement="top" title="Save Changes"><i class="bi bi-floppy"></i></button>
     </div>
+    <div>
+        <button type="button" class="btn-designer" (click)="viewJson()" data-bs-toggle="tooltip" data-bs-placement="top" title="View JSON">
+            <i *ngIf="!jsonView" class="bi bi-filetype-json"></i>
+                <i *ngIf="jsonView" class="bi bi-boxes"></i>
+        </button>
+    
+    </div>
 </div>
-<div class="local-component container-border" >
+
+<div class="local-component container-border scroll json-component" *ngIf="jsonView" >
+    <div class="local-component json-border">
+        <pre>{{form|json}}</pre>
+        <!-- <div class="copy-component">
+            <button type="button" class="btn-designer" (click)="copyJsonData()" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy"><i class="bi bi-clipboard2"></i></button>
+        </div> -->
+    </div>
+<!-- <pre>{{form|json}}</pre> -->
+
+</div>
+
+<div class="local-component container-border scroll" *ngIf="!jsonView" >
 <div>
-    <button type="button" class="btn-designer" (click)="addGroup()"><i class="bi bi-plus"></i>  Group</button>
+    <button type="button" class="btn-designer" (click)="addGroup()"><i class="bi bi-plus"></i>Group</button>
 </div>
-<div class="local-component group-border" *ngFor="let group of form.groups">
+<div class="local-component group-border relative-comp scroll" *ngFor="let group of form.groups">
     <div class="mini-label">
         Group
+    </div>
+    <div class="absolute-delete">
+      
+        <div (click)="removeItemFromArray(form.groups,group)" class="point"><i class="bi bi-x-lg" style="color: #888;"></i></div>
     </div>
     <div class="d-flex justify-content-between">
         <div>
@@ -29,7 +52,7 @@
 
         </div>
      
-        <div (click)="removeItemFromArray(form.groups,group)" class="point align-content-center"><i class="bi bi-trash" style="color: brown;"></i></div>
+
     </div>
     <div class="d-flex">
         <div (click)="groupBorderSet(group,'left')" class="point border-design" [ngClass]="group.border.left?'border-design-selected':''"> <i class="bi bi-border-left"></i> </div>
@@ -53,13 +76,13 @@
     <button type="button" class="btn-designer" (click)="addRow(group)"> <i class="bi bi-plus"></i> Row</button>
 </div>
 
-<div class="local-component row-border" *ngFor="let row of group.rows">
+<div class="local-component row-border scroll relative-comp" *ngFor="let row of group.rows">
     <div class="mini-label">
         Row
     </div>
-    <div>
+    <div class="absolute-delete">
       
-        <div (click)="removeItemFromArray(group.rows,row)" class="point"><i class="bi bi-trash" style="color: brown;"></i></div>
+        <div (click)="removeItemFromArray(group.rows,row)" class="point"><i class="bi bi-x-lg" style="color: #888;"></i></div>
     </div>
     <div>
         <button type="button" class="btn-designer" (click)="addField(row)"><i class="bi bi-plus"></i> Field</button>
@@ -67,7 +90,7 @@
     <!-- <div>
         <button type="button" class="btn-designer" (click)="addTable(row)"><i class="bi bi-plus"></i> Table</button>
     </div> -->
-    <div class="local-component scroll">
+ 
 
 
         <div class="small-component field-border" *ngFor="let field of row.fields">
@@ -75,18 +98,27 @@
             <div *ngIf="field.collapsed">
                 <div class="d-flex justify-content-between">
                     <div> <label class="col-sm-2 col-form-label col-form-label-sm">{{field.caption?field.caption:'caption'}}</label></div>
-                    <div (click)="collapse(field)" class="point"> <i class="bi bi-pencil-square"></i> </div>
+                    <div (click)="collapse(field)" class="point"> <i class="bi bi-pencil-square" style="color: #888;"></i> </div>
                 </div>
 
             </div>
 
-            <div *ngIf="!field.collapsed" style="position: relative;">
+            <div *ngIf="!field.collapsed" class="relative-comp">
                 <div class="mini-label">
                     Field
                 </div>
-                <div style="position: absolute; right:0px" (click)="collapse(field)" class="point"><i class="bi bi-box-arrow-up"></i></div>
-                <div style="position: absolute; right:0px ;bottom: 0px;" (click)="removeItemFromArray(row.fields,field)" class="point"><i class="bi bi-trash" style="color: brown;"></i></div>
+                <!-- <div style="position: absolute; right:0px" (click)="collapse(field)" class="point"><i class="bi bi-box-arrow-up"></i></div> -->
+                <!-- <div style="position: absolute; right:0px ;bottom: 0px;" (click)="removeItemFromArray(row.fields,field)" class="point"><i class="bi bi-trash" style="color: brown;"></i></div> -->
 
+                <div class="absolute-delete-sm">
+      
+                    <div (click)="removeItemFromArray(row.fields,field)" class="point"><i class="bi bi-x-lg" style="color: #888;"></i></div>
+                </div>
+
+                <div class="absolute-collapse-sm">
+      
+                    <div (click)="collapse(field)" class="point"><i class="bi bi-chevron-up" style="color: #888;"></i></div>
+                </div>
 
 
                 <div>
@@ -167,7 +199,7 @@
 
 
 
-    </div>
+
 
 </div>
 </div>

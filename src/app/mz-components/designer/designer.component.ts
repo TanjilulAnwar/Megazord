@@ -14,6 +14,7 @@ export class DesignerComponent {
   // group: any = {};
   // rows: any[] = [];
   // groups: any[] = [];
+  jsonView = false;
   undoStack:any [] =[]
   redoStack:any [] =[]
   form: any = {}
@@ -267,4 +268,14 @@ return JSON.parse(JSON.stringify(obj))
   saveChanges(){
     
   }
+
+  viewJson(){
+this.jsonView = !this.jsonView;
+
+  }
+
+  copyJsonData(){
+    
+  }
+
 }
